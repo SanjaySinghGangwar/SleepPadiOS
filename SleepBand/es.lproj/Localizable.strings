@@ -1,0 +1,364 @@
+/*
+ Localizable.strings
+ SleepBand
+ 
+ Created by admin on 2018/7/5.
+ Copyright © 2018年 admin. All rights reserved.
+ */
+
+//通用
+"Country" = "China";
+"DSVC_SelectDevice" = "Seleccionar dispositivo para iniciar el enlace";
+"SDVC_Search" = "Buscar";
+"Universal_Back" = "Atrás";
+"Cancel" = "Cancelar";
+"Confirm" = "Confirmar";
+"OK" = "OK";
+"Next" = "Siguiente";
+"Phone" = "Teléfono";
+"Email" = "Correo electrónico";
+"Submit" = "Enviar";
+"Save" = "Guardar";
+"UnconnectedDevice" = "Dispositivo desconectado";
+"SendSuccess" = "Envío exitoso";
+"Success" = "Éxito";
+"SendFail" = "Envío fallido";
+"Fail" = "Fallo";
+"WhetherSynchronization" = "Los datos del dispositivo se actualizan, sincronice los datos.";
+"WhetherBatteryCharging" = "La electricidad del equipo es baja. Cargue a tiempo.";
+"Synchronizationing" = "Sincronización";
+"Update" = "Actualizar";
+"UpdateError" = "Error de actualización";
+"UpdateSuccess" = "Actualización exitosa";
+"Updateing" = "Actualizando";
+"ErrorEmailUsed" = "Se ha utilizado el correo electrónico";
+"ErrorPhoneUsed" = "Se ha usado el número de móvil";
+"ErrorEmailFail" = "Error en la entrega del correo";
+"ErrorUserExist" = "La cuenta aún no se ha registrado";
+"ErrorFileUploadFail" = "Error al cargar el archivo";
+"ErrorNetworkRequestFail" = "Error en la solicitud de red";
+"ErrorTokenPastDue" = "Token caducado";
+"SaveError" = "Error al guardar";
+"SaveSuccess" = "Guardado con éxito";
+"EditError" = "Edición fallida";
+"EditSuccess" = "Edición exitosa";
+"DeleteError" = "Fallo al borrar";
+"DeleteSuccess" = "Borrado con éxito";
+"OperationError" = "Operación fallida";
+"PullDownToRefresh" = "Presionar hacia abajo para actualizar";
+"ReleaseToRefresh" = "Liberar y actualizar inmediatamente";
+"Loading" = "Actualizando...";
+"PrivacyPolicy" = "Política de privacidad";
+//
+//选择设备
+"DSVC_Title" = "Elegir dispositivo";
+"DSVC_Join" = "Unirse";
+"DSVC_AlertTitle" = "La aplicación actual ha iniciado sesión en la cuenta, ya sea para confirmar la salida.";
+"DSVC_AlertNoSelect" = "Por favor, seleccione el dispositivo.";
+//登录界面
+"LVC_Title" = "Iniciar sesión";
+"LVC_PhoneLogin" = "Número de teléfono";
+"LVC_EmailLogin" = "Dirección e-mail";
+"LVC_PhoneCountryPlaceholder" = "País";
+"LVC_PhonePlaceholder" = "Teléfono";
+"LVC_EmailPlaceholder" = "E-mail";
+"LVC_PasswordPlaceholder" = "Contraseña";
+"LVC_Register" = "Spanish: Registrarse";
+"LVC_ForgotPassword" = "¿Olvidó su contraseña?";
+"LVC_AlertInputEmpty" = "La información de entrada no puede estar vacía.";
+"LVC_AlertAccountPasswordError" = "Error del nombre de usuario o contraseña.";
+"LVC_AlertLoginFailed" = "Error de inicio de sesión.";
+"LVC_AlertAccountUnregistered" = "La cuenta aún no se ha registrado.";
+"LVC_AlertEmailFormatError" = "Error de formato de correo electrónico.";
+"LVC_AlertPhoneFormatError" = "Error de formato de número de móvil.";
+//"LVC_RememberPassword" = "Remember password";
+"LVC_RememberPassword" = "Guardar contraseña";
+//注册界面
+"RVC_Title" = "Registrarse";
+"RVC_PhoneRegister" = "Móvil";
+"RVC_EmailRegister" = "Email";
+"RVC_PhoneNumBtn" = "Número de móvil";
+"RVC_EmailForgot" = "Email";
+"RVC_PhoneNumForgot" = "Número de móvil";
+"RVC_Code" = " Código de verificación";
+"RVC_SetPassword" = "Configuración de contraseña";
+"RVC_ConfirmPassword" = "Confirmar contraseña";
+"RVC_SignIn" = "Iniciar sesión";
+"RVC_Send" = "Enviar código";
+"RVC_CodePlaceholder" = "Código de verificación";
+"RVC_AlertRegisterSuccess" = "El registro se realizó correctamente, recuerde su usuario y contraseña.";
+"RVC_AlertUserExists" = "El usuario ya existe.";
+"RVC_AlertRegisterFail" = "Fallo en el registro.";
+"RVC_AlertCodeError" = "Error en el código de verificación.";
+"RVC_AlertCodePastDue" = "El código de verificación caduca.";
+"RVC_AlertCodeFrequently" = "Esta cuenta ha solicitado el número de autenticación con demasiada frecuencia. Por favor, inténtalo en 5 minutos.";
+"RVC_AgreeTitle" = "He leído y acepto";
+"RVC_AgreePrivacyPolicies" = "los acuerdos de uso y las políticas de privacidad.";
+//地区选择界面
+"SACVC_Title" = "Países y regiones";
+//忘记密码界面
+"FPVC_ForgotPassword" = "Recuperar contraseña";
+"FPVC_AccountPlaceholder" = "Numero de móvil / E-mail";
+"FPVC_Next" = "Siguiente";
+"FPVC_SetPassword" = "Configure una nueva contraseña";
+"FPVC_ConfirmPassword" = "Confirme la nueva contraseña";
+//搜索设备界面
+"SDVC_SearchTitle" = "Buscar dispositivo";
+"SDVC_HeaderTitle" = "Seleccionar ID de dispositivo";
+"SDVC_RefreshTitle" = "¿No hay dispositivos? Haga clic para actualizar.";
+"SDVC_SearchTableTitle" = "DISPOSITIVOS";
+"SDVC_SearchNoDevice" = "Sin dispositivos de búsqueda, haga clic en el botón de búsqueda para volver a agrupar.";
+//蓝牙
+"BTM_BlueToothClose" = "Por favor, active el Bluetooth en su teléfono móvil.";
+"BTM_BlueToothNoAuthorization" = "Bluetooth móvil no autorizado.";
+"BTM_FailToConnectPeripheral" = "Fallo de la conexión Bluetooth.";
+"BTM_DeviceFailToConnect" = "Desconexión del dispositivo.";
+"BTM_SuccessToConnectPeripheral" = "Conexión Bluetooth exitosa";
+"BTM_DeviceMonitoring" = "Buscar Bluetooth...";
+"BTM_DeviceNoConnect" = "Desconexión del dispositivo.";
+"BTM_DeviceOutTime" = "No se encontró el dispositivo de destino, ¡confirme que el dispositivo esté encendido y dentro del rango de comunicación!";
+//重设密码
+"RPVC_ResetPassword" = "Contraseña";
+"RPVC_ConfirmPasswordPlaceholder" = "Confirmar contraseña";
+"RPVC_AlertResetSuccess" = "La contraseña se cambió con éxito, vuelva a iniciar sesión.";
+"RPVC_AlertPasswordError" = "La contraseña no coincide con la contraseña de confirmación.";
+//睡眠
+"SMVC_Title" = "Dormir";
+"SMVC_HeartRateUnit" = "B/min";
+"SMVC_RespiratoryRateUnit" = "Br/min";
+"SMVC_AlarmClockTitle" = "Hora del despertador ";
+//"SMVC_StartSleep" = "Sleep now";
+//"SMVC_FinishSleep" = "Wake up";
+"SMVC_StartSleep" = "Iniciar monitor";
+"SMVC_FinishSleep" = "Detener monitor";
+"SMVC_HaveNewSleepData" = "Tiene un nuevo informe de sueño";
+"SMVC_Look" = "Ver";
+"SMVC_NoClock" = "No se configuró la alarma";
+//自动监测设置
+"ASSVC_Title" = "Monitorización automática";
+"ASSVC_Message" = "Por favor, configure su tiempo de descanso de acuerdo con sus hábitos de sueño.";
+//实时监测
+"RTVC_Title" = "Monitorización en tiempo real";
+"RTVC_HeartRateTitle" = "Frecuencia cardíaca";
+"RTVC_RespiratoryRateTitle" = "Frecuencia respiratoria";
+//报告
+"RMVC_Title" = "Informe";
+"RMVC_Monday" = "Lun";
+"RMVC_Tuesday" = "Mar";
+"RMVC_Wednesday" = "Mie";
+"RMVC_Thursday" = "Jue";
+"RMVC_Friday" = "Vie";
+"RMVC_Saturday" = "Sab";
+"RMVC_Sunday" = "Dom";
+"RMVC_Day" = "Día";
+"RMVC_Week" = "Semana";
+"RMVC_Month" = "Mes";
+"RMVC_Yesterday" = "Ayer";
+"RMVC_Today" = "Tiempo de dormir";
+"RMVC_MoreData" = "Haga clic para ver más datos";
+"RMVC_ActualSleepTime" = "Tiempo real para dormir";
+"RMVC_SleepsFor" = "Duerme para";
+"RMVC_SleepNoData" = "No hay datos de sueño para el día.";
+"RMVC_Hour" = "h";
+"RMVC_Minute" = "min";
+"RMVC_Sober" = "Despierto";
+"RMVC_LightSleep" = "Ligero";
+"RMVC_MiddleSleep" = "Medio";
+"RMVC_DeepSleep" = "Profundo";
+"RMVC_DeepSleepTime" = "Sueño profundo";
+"RMVC_MiddleSleepTime" = "Sueño medio";
+"RMVC_LightSleepTime" = "Sueño ligero";
+"RMVC_SoberTime" = "Despierta";
+"RMVC_AverageHeartRate" = "Hr promedio";
+"RMVC_AverageRespiratoryRate" = "Br promedio";
+"RMVC_SleepMonitoring" = "Monitor de sueño";
+"RMVC_TurnOver" = "Turn/Move";//Girar/Mover
+"RMVC_TurnOvertime" = "T";
+"RMVC_TurnOverHourTime" = "T/h";
+"RMVC_AverageLengthOfSleepStages" = "Duración promedio del sueño";
+"RMVC_AverageSleepTime" = "Tiempo de sueño por día";
+"RMVC_AverageLengthOfDeepSleep" = "Profundo/Día";
+"RMVC_AverageLengthOfLightSleep" = "Ligero/Día";
+"RMVC_AverageLengthOfSober" = "Despertar/Día";
+"RMVC_AverageLengthOfMiddleSleep" = "Medio/Día";
+"RMVC_SleepLatency" = "Duración del sueño";
+"RMVC_GetUpTime" = "Hora de despertarse";
+"RMVC_FrequencyOfWakeUp" = "Tiempo de espabilarse";
+"RMVC_FrequencyOfBedAway" = "Frecuencia de levantarse de la cama";
+//编辑报告自定义视图
+"ECVC_EditTitle" = "Editar";
+"ECVC_Show" = "Ya se ha mostrado";
+"ECVC_UnShow" = "No se muestra";
+//闹钟
+"ACMVC_Title" = "Alarma";
+"ACMVC_Add" = "Añadir";
+"ACMVC_Delete" = "Borrar";
+"ACMVC_Tips" = "Consejos";
+"ACMVC_Close" = "Apagar el despertador";
+"ACMVC_GetDeviceClockError" = "Error al obtener la alarma del dispositivo.";
+"ACMVC_IntelligentClock" = "Inteligente";
+"ACMVC_GeneralClock" = "Ordinario";
+"ACMVC_GoToBedEarlyClock" = "Hora de acostarse";
+"ACMVC_NurseClock" = "Monitor";
+"ACMVC_GetUpClock" = "Despertar";
+"ACMVC_General" = "Ordinario";
+"ACMVC_GetUp" = "Despertar";
+"ACMVC_GoToBedEarly" = "Hora de acostarse";
+"ACMVC_Nurse" = "Monitor";
+"ACMVC_Everyday" = "Todos los días";
+"ACMVC_Sunday" = "Dom";
+"ACMVC_Monday" = "Lun";
+"ACMVC_Tuesday" = "Mar";
+"ACMVC_Wednesday" = "Mie";
+"ACMVC_Thursday" = "Jue";
+"ACMVC_Friday" = "Vie";
+"ACMVC_Saturday" = "Sab";
+"ACMVC_Everyday" = "Todos los días";
+"ACEVC_EditClockTitle" = "Configurar reloj";
+"ACEVC_TimeTitle" = "Tiempo";
+"ACEVC_DeviceTitle" = "Recordar dispositivo";
+"ACEVC_DevicePhone" = "Mi teléfono";
+"ACEVC_DeviceSleep" = "Banda de sueño";
+"ACEVC_MusicTitle" = "Música";
+"ACEVC_CycleTitle" = "Repetir";
+"ACEVC_RemindLaterTitle" = "Recordarme más tarde";
+"ACEVC_IntelligentWakeTitle" = "Despertar inteligente";
+"ACEVC_EarlySleepRemindTitle" = "Recordatorio matutino del sueño";
+"ACEVC_TypeTitle" = "Tipo";
+"ACEVC_CycleNull" = "Repetir no seleccionado.";
+"ACEVC_ClockIsFull" = "El número de alarmas en el cinturón de dormir está lleno y la preservación falla.";
+"ACEVC_IntelligentClockIsFull" = "La alarma inteligente ya existe.";
+"GeneralClockNotificationBody" = "Despertador habitual";
+"NurseClockNotificationBody" = "Es hora de tomar la medicina.";
+"GoToBedEarlyClockNotificationBody" = "Es hora de dormir.";
+"GetUpClockNotificationBody" = "Es hora de levantarse.";
+
+//音乐
+"ACMVC_MusicTitle" = "Música";
+"ACMVC_DownloadedTitle" = "Descargado";
+"ACMVC_RecommendDownloadedTitle" = "Descarga recomendada";
+//个人
+"PMVC_Title" = "Yo";
+"PMVC_Hi" = "Hola ";
+//"PMVC_SynchronousDataTitle" = "Synchronize Server Data";
+"PMVC_SynchronousDataTitle" = "Obteniendo datos en la nube";
+
+"PMVC_MyDeviceTitle" = "Mi dispositivo";
+"PMVC_AccountTitle" = "Cuenta";
+"PMVC_PersonalInformationTitle" = "Información personal";
+"PMVC_HelpTitle" = "Ayuda";
+"PMVC_FeedbackTitle" = "Comentarios";
+"PMVC_SleepAdviceTitle" = "Consejos para dormir";
+"PMVC_AboutTitle" = "Acerca de";
+
+//帮助
+"PMVC_CommonProblemTitle" = "Preguntas frecuentes";
+"PMVC_Title1" = "Directrices operativas para principiantes";
+"PMVC_Title2" = "¿Cuál es el principio del dispositivo?";
+"PMVC_Title3" = "¿Puedo apagar el teléfono cuando el dispositivo está en funcionamiento?";
+"PMVC_Title4" = "¿Puedo controlar el dispositivo de forma remota?";
+"PMVC_Title5" = "¿Cuánto tiempo se pueden guardar los datos de sueño?";
+"PMVC_Title6" = "¿Ha fallado la conexión del dispositivo?";
+"PMVC_Title7" = "¿Podemos usar el dispositivo en una cama doble?";
+"PMVC_Title8" = "Utilicé el dispositivo ayer, pero no obtuve el informe de suspensión.";
+"PMVC_Title9" = "¿Por qué la alarma no suena aunque se haya configurado correctamente?";
+"PMVC_Title10" = "¿Cómo configurar el dispositivo por primera vez?";
+"PMVC_Title11" = "¿Cómo volver a conectar el teléfono con el dispositivo después de desconectarlo?";
+
+//新手操作指南
+"PMVC_DeviceConnection" = "Conexión del dispositivo";
+"PMVC_SleepStatistic" = "Estadística del sueño";
+"PMVC_SleepStatisticTitle1" = "NO.1 Iniciar y finalizar monitor";
+"PMVC_SleepStatisticTitle2" = "NO.2 Informe de suspensión";
+"PMVC_Step" = "Paso";
+"PMVC_Step1Message" = "Mantenga presionado el botón del dispositivo hasta que se encienda la luz naranja.";
+"PMVC_Step2Message" = "Encienda el Bluetooth en su teléfono.";
+"PMVC_Step3Message" = "Abra la aplicación para registrarse e iniciar sesión.";
+"PMVC_Step4Message" = "Cuando el dispositivo se conecta correctamente, la luz cambiará de naranja a azul.";
+"PMVC_Step5Message" = "Haga clic en 'Inicio' para controlar el corazón y la respiración. Haga clic en 'Finalizar' para detener el monitor.";
+"PMVC_Step6Message" = "Después de que el usuario haya terminado un período de descanso con el cinturón del sueño, el estado de sueño de del sueño actual se puede verificar en el informe.";
+
+"PMVC_Info1" = "El diseño del hardware se utiliza para recopilar los pequeños cambios de señal causados por la respiración en el estado de sueño humano. Tales como la frecuencia respiratoria y la frecuencia cardíaca se extraen a través de este procesamiento de señales para el análisis estadístico, y el informe del sueño se analiza de acuerdo con al algoritmo de sueño.";
+"PMVC_Info2" = "Dado que primero vincula el dispositivo, el usuario puede usar el dispositivo de forma independiente, excepto que se apague el dispositivo. El usuario puede sincronizar los datos y generar el informe de suspensión por la aplicación dentro de los 7 días.";
+"PMVC_Info3" = "El dispositivo se conecta con el teléfono a través de BLE, y podría ser remoto dentro de la distancia de cobertura de Bluetooth.";
+"PMVC_Info4" = "El dispositivo mantiene los datos de suspensión de 7 días como máximo.";
+"PMVC_Info5" = "1.Confirme que el dispositivo se conecta normalmente con la aplicación móvil.\n2.Compruebe que el dispositivo se sincroniza correctamente.\n3.Compruebe que la operación sea correcta y que la conecte en la aplicación SLEEP EE no en la búsqueda de Bluetooth del sistema estado.";
+"PMVC_Info6" = "Sí. Aunque la señal puede ser perturbada por la persona secundaria, el impacto en la precisión del monitoreo es muy pequeño. El dispositivo monitorea a la persona que está por defecto.";
+"PMVC_Info7" = "Asegúrese de que su teléfono se conectó con éxito al dispositivo, haga clic en “Finalizar sueño” para ver su informe de sueño durante la supervisión, si ha terminado, haga clic en el icono “Sincronizar” en la esquina superior derecha de la página de inicio para sincronizar.";
+"PMVC_Info8" = "1.Compruebe que el modo de alarma inteligente esté configurado correctamente.\n2.Asegúrese de que está activado el botón de notificaciones en el panel 'Configuración> notificación'.\n3.El tiempo de configuración de la alarma sin en el modo “No molestar”, desactive el modo 'No molestar'.\n4.No puede sonar el timbre cuando se usa con auriculares.\n5.El volumen del tono de llamada de la alarma está ajustado al mínimo.";
+"PMVC_Info9" = "1.Mantenga presionado el botón en la parte superior hasta que se encienda la luz naranja.\n2.Active el Bluetooth en su teléfono.\n3.Abra la aplicación para implementar la función de 'registrarse/ inicio de sesión'.\n4.Busque el ID del dispositivo y Conectarse al dispositivo, identifica el emparejado con éxito cuando la luz cambia de rojo a azul.";
+"PMVC_Info10" = "1.Abra la aplicación e inicie sesión.\n2.Haga clic en el icono de conexión en la esquina derecha del menú 'sueño'";
+
+//睡眠建议
+"SAVC_SleepQualityTitle" = "Calidad del sueño";
+"SAVC_WhatAreTheStagesOfSleepTitle" = "Cuáles son las etapas del sueño";
+"SAVC_NationalSleepFoundationSleepDurationRecommendationsTitle" = "Recomendaciones de duración del sueño de la National Sleep Foundation";
+"SAVC_AdvicesForFallAsleepQuicklyTitle" = "Consejos para quedarse dormido rápidamente";
+"SAVC_RespiratoryRateTitle" = "Frecuencia respiratoria";
+"SAVC_HeartRateTitle" = "Frecuencia cardíaca";
+
+"SAVC_Info1" = "Un ciclo de sueño se refiere al período de tiempo que le toma a un individuo progresar a través de las etapas de sueño descritas anteriormente. Sin embargo, uno no pasa directamente del sueño profundo al sueño REM. Más bien, un ciclo de sueño progresa a través de las etapas del sueño no REM desde el sueño ligero al profundo, luego regresa del sueño profundo al sueño ligero, terminando con el tiempo en el sueño REM antes de comenzar nuevamente en el sueño ligero. Después del sueño REM, el individuo regresa a la etapa 1 de sueño ligero y comienza un nuevo ciclo. A medida que avanza la noche, las personas pasan cada vez más tiempo en el sueño REM y, en consecuencia, menos tiempo en el sueño profundo. El primer ciclo de sueño dura unos 90 minutos. Después de eso, promedian entre 100 y 120 minutos. Por lo general, un individuo pasará de cuatro a cinco ciclos de sueño por noche.Por lo general, los que duermen pasan por cinco etapas: 1, 2, 3, 4 y sueño REM (movimiento ocular rápido). Estas etapas progresan cíclicamente de 1 a REM y luego comienzan nuevamente con la etapa 1. Un ciclo de sueño completo dura un promedio de 90 a 110 minutos, y cada etapa dura entre 5 y 15 minutos. Los primeros ciclos de sueño cada noche tienen sueño REM relativamente corto y largos períodos de sueño profundo, pero más tarde en la noche, los períodos REM se alargan y el tiempo de sueño profundo disminuye.
+";
+"SAVC_Info2" = "Hay cinco etapas de sueño. Las etapas 1-4 son sueño no REM, seguido de sueño REM.\n1. La Etapa 1 es un sueño ligero donde entras y sales del sueño y puedes despertarlo fácilmente. En esta etapa, los ojos se mueven lentamente y la actividad muscular disminuye. Durante esta etapa, muchas personas experimentan contracciones musculares repentinas precedidas por una sensación de caída.\n2. En la etapa 2, el movimiento ocular se detiene y las ondas cerebrales se vuelven más lentas con solo una explosión ocasional de ondas cerebrales rápidas. El cuerpo comienza a prepararse para un sueño profundo, a medida que la temperatura corporal comienza a bajar y la frecuencia cardíaca disminuye.\n3.Cuando una persona ingresa a la etapa 3, las ondas cerebrales extremadamente lentas llamadas ondas delta se intercalan con ondas más pequeñas y rápidas. Esto es un sueño profundo. Es durante esta etapa que una persona puede experimentar sonambulismo, terrores nocturnos, hablar durante el sueño y orinarse en la cama. Estos comportamientos se conocen como parasomnias y tienden a ocurrir durante las transiciones entre el sueño no REM y REM.\n4. En la etapa 4, el sueño profundo continúa mientras el cerebro produce ondas delta casi exclusivamente. Las personas despertadas de este estado se sienten desorientadas por unos minutos\nSUEÑO REM\nDurante el sueño REM (movimiento ocular rápido), las ondas cerebrales imitan la actividad durante el estado de vigilia. Los ojos permanecen cerrados pero se mueven rápidamente de lado a lado, tal vez relacionados con el sueño intenso y la actividad cerebral que ocurre durante esta etapa.\n";
+//Recomendaciones de duración del sueño de la National Sleep Foundation.\n
+"SAVC_Info3" = "Los recién nacidos (0 ~ 3 meses) duermen de 14 a 17 horas al día\nLos bebés (de 4 a 11 meses) duermen de 12 a 15 horas al día\nLos niños pequeños (1 ~ 2 años) duermen de 11 a 14 horas al día\nPreescolar (3 ~ 5 años) duerme de 10 a 13 horas al día\nLos niños en edad escolar (6-13 años) duermen de 9 a 11 horas al día\nLos adolescentes (14 ~ 17 años) duermen de 8 a 10 horas al día\nLos años luz (18 ~ 25 años) duermen de 7 a 9 horas al día\nLos adultos (26-64 años) duermen de 7 a 9 horas al día\nLas personas mayores (mayores de 65 años) duermen de 7 a 8 horas al día\n--La Fundación Nacional del Sueño";
+"SAVC_Info4" = "1.Practica la relajación progresiva\nRecomendado por la National Sleep Foundation como una forma de conciliar el sueño rápidamente, la relajación muscular progresiva implica tensar lentamente y luego relajar cada músculo de su cuerpo para ayudarlo a relajarse. La Clínica Mayo describe la técnica de la siguiente manera:\nComience por tensar y relajar los músculos de los dedos de los pies y progresivamente hasta llegar al cuello y la cabeza. También puede comenzar con la cabeza y el cuello y trabajar hasta los dedos de los pies. Tense los músculos durante al menos cinco segundos y luego relájese durante 30 segundos y repita.\n'Animo a los pacientes a probar la relajación progresiva', dice Meltzer. 'No es suficiente por sí solo, pero en combinación con otras cosas, definitivamente hace una gran diferencia'\n2.Escuchar música\nLos estudios han demostrado que la música clásica, o cualquier música que tenga un ritmo lento de 60 a 80 latidos por minuto, puede ayudarlo a dormir. En un estudio de 2008, los estudiantes de entre 19 y 28 años que escucharon música clásica relajante durante 45 minutos antes de acostarse mostraron una mejora significativa en la calidad del sueño. Bonificación: también informaron una disminución de los síntomas de depresión.\n3.Limite la cafeína y tome una bebida calmante\nLa cafeína se usa ampliamente entre las personas para combatir la fatiga y estimular el estado de alerta. Se puede encontrar en alimentos y bebidas como chocolate, café, refrescos y bebidas energéticas.\nDesafortunadamente, la cafeína puede tener efectos desastrosos en tu sueño.\nAunque los efectos de la cafeína varían de persona a persona, se recomienda que se abstenga de consumir cafeína al menos seis horas antes de acostarse.\nEn cambio, podría tomar un té relajante como el té de manzanilla, que se ha demostrado que promueve el sueño y la relajación.\n4.Tomar una ducha tibia antes de acostarse\nCalentar su cuerpo con una ducha caliente una hora antes de acostarse y luego entrar al aire más frío hará que la temperatura de su cuerpo baje más precipitadamente. Los estudios demuestran que esta disminución rápida de la temperatura ralentiza su metabolismo más rápido y prepara a su cuerpo para dormir. 'Las duchas también pueden ser muy relajantes, por lo que eso también ayuda', dice Meltzer. Si te duchas todas las noches a la misma hora, haciéndolo parte de una rutina constante para dormir, verás el mayor valor de sueño, agrega. 'Entonces tu cuerpo espera lo que vendrá después'.\n5.Apague toda la electrónica\nUsar dispositivos electrónicos a altas horas de la noche es terrible para dormir.\nMirar televisión, jugar videojuegos, usar un teléfono móvil y las redes sociales puede hacer que sea mucho más difícil quedarse dormido.\nSe recomienda que desconecte todos los dispositivos electrónicos y guarde las computadoras y los teléfonos móviles para garantizar un lugar tranquilo, sin distracciones. Podrá conciliar el sueño mucho más rápido.";
+//未翻译 SAVC_Info5
+"SAVC_Info5" = "Is your breathing “normal?” Respiratory rate refers to how many breaths you take per minute. The normal respiratory rate for adults at rest is 12 to 20 breaths per minute. Anything under that is considered bradypnea (breathing too slow) and anything over that is considered tachypnea (breathing too fast). In COPD, breathing rate is often increased, which is due to a number of factors.\nAverage resting respiratory rates by age are:\n•    birth to 6 weeks: 30–40 breaths per minute\n•    6 months: 25–40 breaths per minute\n•    3 years: 20–30 breaths per minute\n•    6 years: 18–25 breaths per minute\n•    10 years: 17–23 breaths per minute\n•    Adults: 12-18 breaths per minute\n•    Elderly ≥ 65 years old: 12-28 breaths per minute.\n•    Elderly ≥ 80 years old: 10-30 breaths per minute\nChest wall movements\nIn healthy adults, movements of the ribcage and abdomen are synchronised and both move outwards during inspiration. This synchrony can sometimes be lost, so that the ribcage moves inwards during inspiration. A lack of co-ordination between the ribcage and abdominal compartments was first documented in the in 1920s by Charles Franklin Hoover. ‘Hoover’s sign’ has since been used to indicate the flattening of the diaphragm secondary to hyperinflation in patients with COPD and other conditions. In healthy people, ribcage movement is greater than abdominal movement when standing or sitting (contributing roughly 80% of the total movement). When you lie down there is more abdominal movement (around 60% of the total). These percentages vary with age and with gender.\nBreathing rhythm\nThere is a general perception amongst clinicians that ‘normal’ breathing is steady and regular, while ‘abnormal’ breathing is irregular and more variable. There are specific well-known rhythms such as Cheyne-Stokes breathing that support this view. Cheyne-Stokes breathing is a distinctive pattern often seen in patients with end stage heart failure, characterised by periods of rapid breathing, followed by intermittent periods of not breathing (known as apnoea).\n1.tachypnea\nTachypnea or tachypnoea is abnormally rapid breathing.In adult humans at rest, any respiratory rate between 12 and 20 breaths per minute is normal and tachypnea is indicated by a rate greater than 20 breaths per minute.\n2.bradypnea\nBradypnea or bradypnoea is abnormally slow breathing. The respiratory rate at which bradypnea is diagnosed depends on the age of the patient.\nAge ranges\nAge 0–1 year < 30 breaths per minute\nAge 1–3 years < 25 breaths per minute\nAge 3–12 years < 20 breaths per minute\nAge 12–50 years < 12 breaths per minute\nAge 50 and up < 13 breaths per minute\nSymptoms\n•    Dizziness\n•    Near-fainting or fainting\n•    Fatigue\n•    Weakness\n•    Chest pains\n•    Shortness of breath\n•    Memory impairment or confusion\n•    Tiring easily during any physical activity";
+"SAVC_Info6" = "Una frecuencia cardíaca en reposo normal para adultos varía de 60 a 100 latidos por minuto.\nEn general, una frecuencia cardíaca más baja en reposo implica una función cardíaca más eficiente y una mejor aptitud cardiovascular. Por ejemplo, un atleta bien entrenado podría tener un ritmo cardíaco normal en reposo cercano a 40 latidos por minuto.\nPara medir su ritmo cardíaco, simplemente controle su pulso. Coloque los dedos índice y tercero en el cuello al costado de la tráquea. Para controlar su pulso en su muñeca, coloque dos dedos entre el hueso y el tendón sobre su arteria radial, que se encuentra en el lado del pulgar de su muñeca.\nCuando sientas el pulso, cuenta la cantidad de latidos en 15 segundos. Multiplique este número por cuatro para calcular sus latidos por minuto.\nTenga en cuenta que muchos factores pueden influir en la frecuencia cardíaca, incluidos:\n•    Años\n•    Aptitud física y niveles de actividad.\n•    Ser fumador\n•    Tener enfermedad cardiovascular, colesterol alto o diabetes.\n•    Temperatura del aire\n•    Posición del cuerpo (de pie o acostado, por ejemplo)\n•    emociones\n•    Tamaño corporal\n•    Medicamentos\nAunque hay un amplio rango de normalidad, una frecuencia cardíaca inusualmente alta o baja puede indicar un problema subyacente. Consulte a su médico si su frecuencia cardíaca en reposo es constantemente superior a 100 latidos por minuto (taquicardia) o si no es un atleta entrenado y su frecuencia cardíaca en reposo es inferior a 60 latidos por minuto (bradicardia), especialmente si tiene otros signos o síntomas , como desmayos, mareos o falta de aliento.";
+
+//反馈
+"IVC_PlaceHolder" = "Su pregunta / comentario";
+
+//关于
+"AboutVC_Title" = "Acerca de";
+"TermsVC_Title" = "Términos de uso y política de privacidad";
+
+//账号
+"AVC_ChangePasswordTitle" = "Cambiar contraseña";
+"AVC_Logout" = "Cerrar sesión";
+"AVC_UnBind" = "Sin enlazar";
+"AVC_BindPhone" = "Enlazar teléfono móvil";
+"AVC_BindEmail" = "Enlazar correo electrónico";
+"AVC_CancelBind" = "Desvincular";
+"AVC_ChangeBind" = "Cambiar enlace";
+"AVC_Bind" = "Enlazado";
+//个人信息
+"PIVC_NameTitle" = "Nombre";
+"PIVC_GenderTitle" = "Género";
+"PIVC_AgeTitle" = "Edad";
+"PIVC_HeightTitle" = "Altura";
+"PIVC_WeightTitle" = "Peso";
+"PIVC_GenderMale" = "Hombre";
+"PIVC_GenderFemale" = "Mujer";
+"PIVC_InputName" = "Por favor, introduzca su nombre";
+"PIVC_Unit" = "Unidad";
+//"PIVC_StandardUnit" = "Standard Unit";
+//"PIVC_EnglishUnit" = "English Unit";
+"PIVC_StandardUnit" = "Métrica";
+"PIVC_EnglishUnit" = "Pulgada";
+
+
+//我的设备
+"MDVC_DeleteDevice" = "Desenlazar dispositivo";
+"MDVC_FailForDeleteDevice" = "Error al desenlazar";
+"MDVC_DeleteDeviceAlert" = "Vincular o no el dispositivo?";
+"MDVC_BatteryTitle" = "Batería";
+"MDVC_BatteryCharge" = "Cargando...";
+"MDVC_FirmwareTitle" = "Versión de firmware";
+"MDVC_IDTitle" = "ID del dispositivo";
+"MDVC_BlueToothTitle" = "Dirección Bluetooth";
+"MDVC_CurrentVersion" = "Versión:";
+"MDVC_NewestVersion" = "Nueva versión:";
+"MDVC_NewestVersionError" = "Error al obtener información de actualización.";
+"MDVC_NewestVersionAlert" = "Nueva versión detectada, actualícela";
+//
+//选择日期  
+"SDVC_Title" = "Fecha de selección";
+
+"图文验证码" = "Código de verificación gráfico";
+"请输入图片中的数字或字母" = "Por favor ingrese números o letras de la imagen";
+"请先输入图文验证码" = "Introduce primero el código de verificación de la imagen";
+"提醒" = "recordar";
+"注销账号" = "Cerrar sesión";
+"是否确认注销您的账号,确认后账号将会在三天内注销成功,注销成功后账号数据将被完全删除,不可恢复!请谨慎操作." = "Ya sea para confirmar la cancelación de su cuenta, la cuenta se cancelará con éxito dentro de los tres días posteriores a la confirmación, y los datos de la cuenta se eliminarán por completo después de la cancelación exitosa, ¡que no se pueden recuperar!Opere con precaución.";

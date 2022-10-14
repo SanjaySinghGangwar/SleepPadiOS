@@ -1,0 +1,76 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - iOSDFULibrary (4.13.0):
+    - ZIPFoundation (= 0.9.11)
+  - LKDBHelper (2.5.1):
+    - LKDBHelper/standard (= 2.5.1)
+  - LKDBHelper/standard (2.5.1):
+    - FMDB
+  - Masonry (1.1.0)
+  - MJExtension (3.0.17)
+  - MJRefresh (3.2.0)
+  - SAMKeychain (1.5.3)
+  - SVProgressHUD (2.2.5)
+  - ZIPFoundation (0.9.11)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Charts
+  - iOSDFULibrary
+  - LKDBHelper
+  - Masonry
+  - MJExtension
+  - MJRefresh
+  - SAMKeychain
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Charts
+    - FMDB
+    - iOSDFULibrary
+    - LKDBHelper
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - SAMKeychain
+    - SVProgressHUD
+    - ZIPFoundation
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  iOSDFULibrary: 3b9de67ed4bfb901b5f09c2fea843f65e152612d
+  LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
+
+PODFILE CHECKSUM: fffa6bcc0bc198a2d6e37c013eab5ffccecd28d7
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  SleepBand
+
+  Created by admin on 2019/1/3.
+  Copyright © 2019年 admin. All rights reserved.
+*/
+"NSBluetoothPeripheralUsageDescription" = "We need your consent to access Bluetooth to connect to a Bluetooth device";
+"NSBluetoothAlwaysUsageDescription" = "We need your consent to access Bluetooth to connect to a Bluetooth device";

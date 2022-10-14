@@ -1,0 +1,362 @@
+/*
+ Localizable.strings
+ SleepBand
+ 
+ Created by admin on 2018/7/5.
+ Copyright © 2018年 admin. All rights reserved.
+ */
+
+//通用
+"Country" = "China";
+"DSVC_SelectDevice" = "Select device to start binding";
+"SDVC_Search" = "Search";
+"Universal_Back" = "Back";
+"Cancel" = "Cancel";
+"Confirm" = "Confirm";
+"OK" = "OK";
+"Next" = "Next";
+"Phone" = "Phone";
+"Email" = "Email";
+"Submit" = "Submit";
+"Save" = "Save";
+"UnconnectedDevice" = "Unconnected device.";
+"SendSuccess" = "Send success.";
+"Success" = "Success";
+"SendFail" = "Send fail.";
+"Fail" = "Fail";
+"WhetherSynchronization" = "The device data is updated, please synchronize the data.";
+"WhetherBatteryCharging" = "Electricity of equipment is low. Please charge it in time.";
+"Synchronizationing" = "Synchronous...";
+"Update" = "Update";
+"UpdateError" = "Upgrade failed.";
+"UpdateSuccess" = "Upgrade success.";
+"Updateing" = "Upgrade...";
+"ErrorEmailUsed" = "The email has been used.";
+"ErrorPhoneUsed" = "The mobile number has been used.";
+"ErrorEmailFail" = "Mail delivery failed.";
+"ErrorUserExist" = "The account has not been registered yet.";
+"ErrorFileUploadFail" = "File upload failed.";
+"ErrorNetworkRequestFail" = "Network request failed.";
+"ErrorTokenPastDue" = "Token expired.";
+"SaveError" = "Save failed.";
+"SaveSuccess" = "Save success.";
+"EditError" = "Editor failure.";
+"EditSuccess" = "Editor success.";
+"DeleteError" = "Delete failure.";
+"DeleteSuccess" = "Delete success.";
+"OperationError" = "Operation failed.";
+"PullDownToRefresh" = "Drop-down refresh";
+"ReleaseToRefresh" = "Release and refresh immediately";
+"Loading" = "Refresh...";
+"PrivacyPolicy" = "Privacy Policy";
+//
+//选择设备
+"DSVC_Title" = "CHOOSE DEVICE";
+"DSVC_Join" = "JOIN";
+"DSVC_AlertTitle" = "The current application has logged in to the account,whether to confirm the exit.";
+"DSVC_AlertNoSelect" = "Please select the device.";
+//登录界面
+"LVC_Title" = "Login";
+"LVC_PhoneLogin" = "Phone Number";
+"LVC_EmailLogin" = "Email Adress";
+"LVC_PhoneCountryPlaceholder" = "Country";
+"LVC_PhonePlaceholder" = "Phone number";
+"LVC_EmailPlaceholder" = "e-mail";
+"LVC_PasswordPlaceholder" = "Password";
+"LVC_Register" = "Sign Up";
+"LVC_ForgotPassword" = "Forgot ?";
+"LVC_AlertInputEmpty" = "Input information cannot be empty.";
+"LVC_AlertAccountPasswordError" = "Account or password error.";
+"LVC_AlertLoginFailed" = "Login failed.";
+"LVC_AlertAccountUnregistered" = "The account has not been registered yet.";
+"LVC_AlertEmailFormatError" = "E-mail format error.";
+"LVC_AlertPhoneFormatError" = "Mobile number format error.";
+//"LVC_RememberPassword" = "Remember password";
+"LVC_RememberPassword" = "Keep password";
+//注册界面
+"RVC_Title" = "Sign Up";
+"RVC_PhoneRegister" = "Mobile";
+"RVC_EmailRegister" = "Email";
+"RVC_PhoneNumBtn" = "Mobile Number";
+"RVC_EmailForgot" = "Email";
+"RVC_PhoneNumForgot" = "Mobile Number";
+"RVC_Code" = "Verification Code";
+"RVC_SetPassword" = "Setting Password";
+"RVC_ConfirmPassword" = "Confirm Password";
+"RVC_SignIn" = "Sign IN";
+"RVC_Send" = "Send Code";
+"RVC_CodePlaceholder" = "Verification Code";
+"RVC_AlertRegisterSuccess" = "Registration is successful, please remember your account and password.";
+"RVC_AlertUserExists" = "User already exists.";
+"RVC_AlertRegisterFail" = "Sign up failed.";
+"RVC_AlertCodeError" = "Verification code error.";
+"RVC_AlertCodePastDue" = "Verification code expires.";
+"RVC_AlertCodeFrequently" = "This account gets authentication number too frequently. Please get it in 5 minutes.";
+"RVC_AgreeTitle" = "I have read and agreed to";
+"RVC_AgreePrivacyPolicies" = "the use agreements and privacy policies";
+//地区选择界面
+"SACVC_Title" = "Countries and Regions";
+//忘记密码界面
+"FPVC_ForgotPassword" = "Retrieve Password";
+"FPVC_AccountPlaceholder" = "Mobile Number / Email";
+"FPVC_Next" = "Next";
+"FPVC_SetPassword" = "Setting New Password";
+"FPVC_ConfirmPassword" = "Confirm New Password";
+//搜索设备界面
+"SDVC_SearchTitle" = "Search Device";
+"SDVC_HeaderTitle" = "Select Device ID";
+"SDVC_RefreshTitle" = "No device? Click to refresh.";
+"SDVC_SearchTableTitle" = "DEVICES";
+"SDVC_SearchNoDevice" = "No search devices,please click the search button to repack.";
+//蓝牙
+"BTM_BlueToothClose" = "Please turn on Bluetooth on your mobile phone.";
+"BTM_BlueToothNoAuthorization" = "Mobile Bluetooth Unauthorized.";
+"BTM_FailToConnectPeripheral" = "Bluetooth connection failure.";
+"BTM_DeviceFailToConnect" = "Device disconnect.";
+"BTM_SuccessToConnectPeripheral" = "Bluetooth Connection Successful";
+"BTM_DeviceMonitoring" = "Search Bluetooth...";
+"BTM_DeviceNoConnect" = "Unconnected device.";
+"BTM_DeviceOutTime" = "The target device was not found, please confirm that the device is turned on and within communication range!";
+//重设密码
+"RPVC_ResetPassword" = "Password";
+"RPVC_ConfirmPasswordPlaceholder" = "Confirm Password";
+"RPVC_AlertResetSuccess" = "Password changed successfully, please log in again.";
+"RPVC_AlertPasswordError" = "The password is inconsistent with the confirmation password.";
+//睡眠
+"SMVC_Title" = "Sleep";
+"SMVC_HeartRateUnit" = "B/min";
+"SMVC_RespiratoryRateUnit" = "Br/min";
+"SMVC_AlarmClockTitle" = "Alarm clock time ";
+//"SMVC_StartSleep" = "Sleep now";
+//"SMVC_FinishSleep" = "Wake up";
+"SMVC_StartSleep" = "Start Monitor";
+"SMVC_FinishSleep" = "Stop Monitor";
+"SMVC_HaveNewSleepData" = "You have a new sleep Report";
+"SMVC_Look" = "See";
+"SMVC_NoClock" = "No alarm clock was set";
+//自动监测设置
+"ASSVC_Title" = "Automatic Monitoring";
+"ASSVC_Message" = "Please set your sleep time according to your sleep habits.";
+//实时监测
+"RTVC_Title" = "Real Time Monitoring";
+"RTVC_HeartRateTitle" = "Heart rate";
+"RTVC_RespiratoryRateTitle" = "Breath rate";
+//报告
+"RMVC_Title" = "Report";
+"RMVC_Monday" = "Mon";
+"RMVC_Tuesday" = "Tue";
+"RMVC_Wednesday" = "Wed";
+"RMVC_Thursday" = "Thu";
+"RMVC_Friday" = "Fri";
+"RMVC_Saturday" = "Sat";
+"RMVC_Sunday" = "Sun";
+"RMVC_Day" = "Day";
+"RMVC_Week" = "Week";
+"RMVC_Month" = "Month";
+"RMVC_Yesterday" = "Yesterday";
+"RMVC_Today" = "sleeping time";
+"RMVC_MoreData" = "Click to see more data";
+"RMVC_ActualSleepTime" = "Actual sleeping time";
+"RMVC_SleepsFor" = "Sleeps for";
+"RMVC_SleepNoData" = "No sleep data for the day.";
+"RMVC_Hour" = "h";
+"RMVC_Minute" = "min";
+"RMVC_Sober" = "Awake";
+"RMVC_LightSleep" = "Light";
+"RMVC_MiddleSleep" = "Middle";
+"RMVC_DeepSleep" = "Deep";
+"RMVC_DeepSleepTime" = "Deep sleep";
+"RMVC_MiddleSleepTime" = "Middle sleep";
+"RMVC_LightSleepTime" = "Light sleep";
+"RMVC_SoberTime" = "Wake up";
+"RMVC_AverageHeartRate" = "Average Hr";
+"RMVC_AverageRespiratoryRate" = "Average Br";
+"RMVC_SleepMonitoring" = "Sleeping monitor";
+"RMVC_TurnOver" = "Turn/Move";
+"RMVC_TurnOvertime" = "T";
+"RMVC_TurnOverHourTime" = "T/h";
+"RMVC_AverageLengthOfSleepStages" = "Average sleep duration";
+"RMVC_AverageSleepTime" = "Sleep time per day";
+"RMVC_AverageLengthOfDeepSleep" = "Deep/Day";
+"RMVC_AverageLengthOfLightSleep" = "Light/Day";
+"RMVC_AverageLengthOfSober" = "Wake up/Day";
+"RMVC_AverageLengthOfMiddleSleep" = "Middle/Day";
+"RMVC_SleepLatency" = "Sleep duration";
+"RMVC_GetUpTime" = "Wake-up time";
+"RMVC_FrequencyOfWakeUp" = "Sober times";
+"RMVC_FrequencyOfBedAway" = "Frequency of out of bed";
+//编辑报告自定义视图
+"ECVC_EditTitle" = "Edit";
+"ECVC_Show" = "Already shown";
+"ECVC_UnShow" = "Not shown";
+//闹钟
+"ACMVC_Title" = "Alarm";
+"ACMVC_Add" = "Add";
+"ACMVC_Delete" = "Delete";
+"ACMVC_Tips" = "Tips";
+"ACMVC_Close" = "Turn off the alarm clock";
+"ACMVC_GetDeviceClockError" = "Failed to get device alarm clock.";
+"ACMVC_IntelligentClock" = "Intelligent";
+"ACMVC_GeneralClock" = "Ordinary";
+"ACMVC_GoToBedEarlyClock" = "Bedtime";
+"ACMVC_NurseClock" = "Monitor";
+"ACMVC_GetUpClock" = "Wake";
+"ACMVC_General" = "Ordinary";
+"ACMVC_GetUp" = "Wake up";
+"ACMVC_GoToBedEarly" = "Bedtime";
+"ACMVC_Nurse" = "Monitor";
+"ACMVC_Everyday" = "Everyday";
+"ACMVC_Sunday" = "Sun";
+"ACMVC_Monday" = "Mon";
+"ACMVC_Tuesday" = "Tue";
+"ACMVC_Wednesday" = "Wed";
+"ACMVC_Thursday" = "Thu";
+"ACMVC_Friday" = "Fri";
+"ACMVC_Saturday" = "Sat";
+"ACMVC_Everyday" = "Everyday";
+"ACEVC_EditClockTitle" = "Edit Clock";
+"ACEVC_TimeTitle" = "Time";
+"ACEVC_DeviceTitle" = "Remind Device";
+"ACEVC_DevicePhone" = "My Phone";
+"ACEVC_DeviceSleep" = "Sleep Band";
+"ACEVC_MusicTitle" = "Music";
+"ACEVC_CycleTitle" = "Repeat";
+"ACEVC_RemindLaterTitle" = "Remind Me Later";
+"ACEVC_IntelligentWakeTitle" = "Intelligent awaken";
+"ACEVC_EarlySleepRemindTitle" = "Morning Sleep Reminder";
+"ACEVC_TypeTitle" = "Type";
+"ACEVC_CycleNull" = "Repeat not selected.";
+"ACEVC_ClockIsFull" = "The number of alarm clocks in the sleeping belt is full and the preservation fails.";
+"ACEVC_IntelligentClockIsFull" = "Intelligent alarm clock already exists.";
+"GeneralClockNotificationBody" = "Ordinary alarm clock";
+"NurseClockNotificationBody" = "It's time to take medicine.";
+"GoToBedEarlyClockNotificationBody" = "It's time to sleep.";
+"GetUpClockNotificationBody" = "It's time to get up.";
+
+//音乐
+"ACMVC_MusicTitle" = "Music";
+"ACMVC_DownloadedTitle" = "Downloaded";
+"ACMVC_RecommendDownloadedTitle" = "Recommended download";
+//个人
+"PMVC_Title" = "Me";
+"PMVC_Hi" = "hi ";
+//"PMVC_SynchronousDataTitle" = "Synchronize Server Data";
+"PMVC_SynchronousDataTitle" = "Getting Cloud Data";
+
+"PMVC_MyDeviceTitle" = "My Device";
+"PMVC_AccountTitle" = "Account";
+"PMVC_PersonalInformationTitle" = "Personal info";
+"PMVC_HelpTitle" = "Help";
+"PMVC_FeedbackTitle" = "Feedback";
+"PMVC_SleepAdviceTitle" = "Sleep Advice";
+"PMVC_AboutTitle" = "About";
+
+//帮助
+"PMVC_CommonProblemTitle" = "FAQ";
+"PMVC_Title1" = "Novice Operational Guidelines";
+"PMVC_Title2" = "What is the principle of device?";
+"PMVC_Title3" = "Can I turn off the phone when the device is working?";
+"PMVC_Title4" = "Can I remote the device?";
+"PMVC_Title5" = "How long sleep data can be saved?";
+"PMVC_Title6" = "The device connect failed?";
+"PMVC_Title7" = "Can we use the device on a double bed?";
+"PMVC_Title8" = "I tested sleep but didn't generate a sleep Report";
+"PMVC_Title9" = "Why does the alarm clock not ring although the alarm is settled up successfully?";
+"PMVC_Title10" = "How to configure the device at the first time?";
+"PMVC_Title11" = "How to reconnect the phone with device after disconnected?";
+
+//新手操作指南
+"PMVC_DeviceConnection" = "Device Connection";
+"PMVC_SleepStatistic" = "Sleep Statistic";
+"PMVC_SleepStatisticTitle1" = "NO.1 Start & End Monitor";
+"PMVC_SleepStatisticTitle2" = "NO.2 Sleep Report";
+"PMVC_Step" = "Step";
+"PMVC_Step1Message" = "Long press the device button till blue light is on.";
+"PMVC_Step2Message" = "Turn on the Bluetooth on you phone.";
+"PMVC_Step3Message" = "Open the App to register and log in.";
+"PMVC_Step4Message" = "The indicator turns blue when the device is connected successfully.";
+"PMVC_Step5Message" = "click ‘start’ to monitor heart and breath rete click ‘end’ to stop monitor.";
+"PMVC_Step6Message" = "After the user has finished a period of sleep with the sleep belt, the sleep status of the current sleep can be checked in the report";
+
+"PMVC_Info1" = "The hardware design is used to collect the small signal changes caused by the breathing in the human sleep state. Such as respiratory rate and heart rate are extracted through these signal processing for statistical analysis, and the sleep report is analyzed according to the sleep algorithm.";
+"PMVC_Info2" = "Since you binding the device first, user can use the device independently except the device power down. and the user could synchronize the data and generate the sleep report by the app within 7 days.";
+"PMVC_Info3" = "The device connect with the phone via BLE, and it could be remote within the Bluetooth coverage distance.";
+"PMVC_Info4" = "The device keep 7 days sleep data maximally .";
+"PMVC_Info5" = "1.Confirm that the device connect with mobile app normally.\n2.Check that the device is pairing correctly.\n3.Check the operation is correctly which connect it in the SLEEP EE application not in the system Bluetooth search status.";
+"PMVC_Info6" = "Yes.Although the signal could be disturbed by the side person, the impact on the accuracy of the monitoring is very small.device monitor the person who lying on default.";
+"PMVC_Info7" = "Make sure the connection between the mobile phone and the device is successful. Please click the 'synchronize' button in the upper right corner of the report page to synchronize.";
+"PMVC_Info8" = "1.Check that smart alarm mode is configured correctly.\n2.Make sure the notification switch in the system 'Settings > notification' App notification was turned on.\n3.The alarm Setting time within the Do Not Disturb mode,please turn off the Do Not Disturb mode.\n4.Cannot ring the bell when is using by headphones.\n5.The volume of Alarm clock ringtone is tuned to a minimum.";
+"PMVC_Info9" = "1.Long press the button on the top until the blue light is on.\n2.Turn on the Bluetooth on your phone.\n3.Open the app to implement sing up/ login.\n4.Connect to the searched device ID and see that the device indicator turns blue and long to indicate that the configuration is successful.";
+"PMVC_Info10" = "1.Open the app and login.\n2.Click the connect icon at the right corner on the “sleep” menu.";
+
+//睡眠建议
+"SAVC_SleepQualityTitle" = "Sleep Quality";
+"SAVC_WhatAreTheStagesOfSleepTitle" = "What Are The Stages Of Sleep";
+"SAVC_NationalSleepFoundationSleepDurationRecommendationsTitle" = "National Sleep Foundation’s Sleep Duration Recommendations";
+"SAVC_AdvicesForFallAsleepQuicklyTitle" = "Advices For Fall Asleep Quickly";
+"SAVC_RespiratoryRateTitle" = "Respiratory Rate";
+"SAVC_HeartRateTitle" = "Heart Rate";
+
+"SAVC_Info1" = "A sleep cycle refers to the period of time it takes for an individual to progress through the stages of sleep outlined above. One does not go straight from deep sleep to REM sleep, however. Rather, a sleep cycle progress through the stages of non-REM sleep from light to deep sleep, then reverse back from deep sleep to light sleep, ending with time in REM sleep before starting over in light sleep again. After REM sleep, the individual returns to stage 1 of light sleep and begins a new cycle. As the night progresses, individuals spend increasingly more time in REM sleep and correspondingly less time in deep sleep. The first sleep cycle takes about 90 minutes. After that, they average between 100 to 120 minutes. Typically, an individual will go through four to five sleep cycles a night.\nUsually sleepers pass through five stages: 1, 2, 3, 4 and REM (rapid eye movement) sleep. These stages progress cyclically from 1 through REM then begin again with stage 1. A complete sleep cycle takes an average of 90 to 110 minutes, with each stage lasting between 5 to 15 minutes. The first sleep cycles each night have relatively short REM sleeps and long periods of deep sleep but later in the night, REM periods lengthen and deep sleep time decreases.";
+"SAVC_Info2" = "There are five stages of sleep. Stages 1-4 are non-REM sleep, followed by REM sleep.\n1.Stage 1 is light sleep where you drift in and out of sleep and can be awakened easily. In this stage, the eyes move slowly and muscle activity slows. During this stage, many people experience sudden muscle contractions preceded by a sensation of falling.\n2.In stage 2, eye movement stops and brain waves become slower with only an occasional burst of rapid brain waves. The body begins to prepare for deep sleep, as the body temperature begins to drop and the heart rates slows.\n3.When a person enters stage 3, extremely slow brain waves called delta waves are interspersed with smaller, faster waves. This is deep sleep. It is during this stage that a person may experience sleepwalking, night terrors, talking during one’s sleep, and bedwetting. These behaviors are known as parasomnias, and tend to occur during the transitions between non-REM and REM sleep.\n4.In stage 4, deep sleep continues as the brain produces delta waves almost exclusively. People roused from this state feel disoriented for a few minutes.\nREM SLEEP\nDuring REM (rapid eye movement) sleep, brain waves mimic activity during the waking state. The eyes remain closed but move rapidly from side-to-side, perhaps related to the intense dream and brain activity that occurs during this stage.\n";
+//National Sleep Foundation’s Sleep Duration Recommendations:\n
+"SAVC_Info3" = "Newborns (0~3 months) sleep for 14 to 17 hours a day\nInfants (4~11 months) sleep for 12 to 15 hours a day\nYoung children (1~2 years old) sleep 11 to 14 hours a day\nPreschool (3~5 years old) sleeps 10 to 13 hours a day\nSchool-age children (6-13 years old) sleep 9 to 11 hours a day\nTeenagers (14~17 years old) sleep 8 to 10 hours a day\nLight years (18~25 years old) sleep 7 to 9 hours a day\nAdults (26-64 years old) sleep 7 to 9 hours a day\nOlder people (65+) sleep 7 to 8 hours a day\n--The National Sleep Foundation";
+"SAVC_Info4" = "1.Practice progressive relaxation\nRecommended by the National Sleep Foundation as a way to fall asleep fast, progressive muscle relaxation involves slowly tensing and then relaxing each muscle in your body to help your body relax. The Mayo Clinic describes the technique as follows:\nStart by tensing and relaxing the muscles in your toes and progressively working your way up to your neck and head. You can also start with your head and neck and work down to your toes. Tense your muscles for at least five seconds and then relax for 30 seconds, and repeat.\n“I encourage patients to try progressive relaxation,” says Meltzer. “It’s not enough by itself, but in combination with other things, it definitely makes a huge difference.”\n2.Listen to music\nStudies have shown that classical music, or any music that has a slow rhythm of 60 to 80 beats per minute, can help lull you to sleep. In a 2008 study, students aged 19 to 28 who listened to relaxing classical music for 45 minutes before bed showed significant improvement in sleep quality. Bonus: They also reported decreased symptoms of depression.\n3.Limit Caffeine and Drink a Soothing Beverage\nCaffeine is widely used among people to fight fatigue and stimulate alertness. It can be found in foods and beverages like chocolate, coffee, sodas and energy drinks.\nUnfortunately, caffeine can have disastrous effects on your sleep.\nAlthough the effects of caffeine vary from person to person, it is recommended that you refrain from consuming caffeine at least six hours before bedtime.\nInstead, you could drink a soothing tea like chamomile tea, which has been shown to promote sleep and relaxation.\n4.Take a warm shower before bed\nWarming your body up with a hot shower an hour before bed and then stepping into cooler air will cause your body temperature to drop more precipitously. Studies show that this rapid temperature decrease slows your metabolism faster and prepares your body for sleep. “Showers can also be very relaxing, so that helps, too,” says Meltzer. If you shower every night around the same time, making it part of a consistent bedtime routine, you’ll see the most sleep value from it, she adds. “Then your body has an expectation of what’s coming next.”\n5.Turn Off All Electronics\nUsing electronic devices late at night is terrible for sleep.\nWatching TV, playing video games, using a mobile phone and social networking can make it significantly harder for you to fall and stay asleep.\nIt is recommended that you disconnect all electronics and put away computers and mobile phones so you can ensure a quiet place, free of distractions. You will be able to fall asleep much faster.";
+"SAVC_Info5" = "Is your breathing “normal?” Respiratory rate refers to how many breaths you take per minute. The normal respiratory rate for adults at rest is 12 to 20 breaths per minute. Anything under that is considered bradypnea (breathing too slow) and anything over that is considered tachypnea (breathing too fast). In COPD, breathing rate is often increased, which is due to a number of factors.\nAverage resting respiratory rates by age are:\n•    birth to 6 weeks: 30–40 breaths per minute\n•    6 months: 25–40 breaths per minute\n•    3 years: 20–30 breaths per minute\n•    6 years: 18–25 breaths per minute\n•    10 years: 17–23 breaths per minute\n•    Adults: 12-18 breaths per minute\n•    Elderly ≥ 65 years old: 12-28 breaths per minute.\n•    Elderly ≥ 80 years old: 10-30 breaths per minute\nChest wall movements\nIn healthy adults, movements of the ribcage and abdomen are synchronised and both move outwards during inspiration. This synchrony can sometimes be lost, so that the ribcage moves inwards during inspiration. A lack of co-ordination between the ribcage and abdominal compartments was first documented in the in 1920s by Charles Franklin Hoover. ‘Hoover’s sign’ has since been used to indicate the flattening of the diaphragm secondary to hyperinflation in patients with COPD and other conditions. In healthy people, ribcage movement is greater than abdominal movement when standing or sitting (contributing roughly 80% of the total movement). When you lie down there is more abdominal movement (around 60% of the total). These percentages vary with age and with gender.\nBreathing rhythm\nThere is a general perception amongst clinicians that ‘normal’ breathing is steady and regular, while ‘abnormal’ breathing is irregular and more variable. There are specific well-known rhythms such as Cheyne-Stokes breathing that support this view. Cheyne-Stokes breathing is a distinctive pattern often seen in patients with end stage heart failure, characterised by periods of rapid breathing, followed by intermittent periods of not breathing (known as apnoea).\n1.tachypnea\nTachypnea or tachypnoea is abnormally rapid breathing.In adult humans at rest, any respiratory rate between 12 and 20 breaths per minute is normal and tachypnea is indicated by a rate greater than 20 breaths per minute.\n2.bradypnea\nBradypnea or bradypnoea is abnormally slow breathing. The respiratory rate at which bradypnea is diagnosed depends on the age of the patient.\nAge ranges\nAge 0–1 year < 30 breaths per minute\nAge 1–3 years < 25 breaths per minute\nAge 3–12 years < 20 breaths per minute\nAge 12–50 years < 12 breaths per minute\nAge 50 and up < 13 breaths per minute\nSymptoms\n•    Dizziness\n•    Near-fainting or fainting\n•    Fatigue\n•    Weakness\n•    Chest pains\n•    Shortness of breath\n•    Memory impairment or confusion\n•    Tiring easily during any physical activity";
+"SAVC_Info6" = "A normal resting heart rate for adults ranges from 60 to 100 beats per minute.\nGenerally, a lower heart rate at rest implies more efficient heart function and better cardiovascular fitness. For example, a well-trained athlete might have a normal resting heart rate closer to 40 beats per minute.\nTo measure your heart rate, simply check your pulse. Place your index and third fingers on your neck to the side of your windpipe. To check your pulse at your wrist, place two fingers between the bone and the tendon over your radial artery — which is located on the thumb side of your wrist.\nWhen you feel your pulse, count the number of beats in 15 seconds. Multiply this number by four to calculate your beats per minute.\nKeep in mind that many factors can influence heart rate, including:\n•    Age\n•    Fitness and activity levels\n•    Being a smoker\n•    Having cardiovascular disease, high cholesterol or diabetes\n•    Air temperature\n•    Body position (standing up or lying down, for example)\n•    Emotions\n•    Body size\n•    Medications\nAlthough there's a wide range of normal, an unusually high or low heart rate may indicate an underlying problem. Consult your doctor if your resting heart rate is consistently above 100 beats a minute (tachycardia) or if you're not a trained athlete and your resting heart rate is below 60 beats a minute (bradycardia) — especially if you have other signs or symptoms, such as fainting, dizziness or shortness of breath.";
+
+//反馈
+"IVC_PlaceHolder" = "Your question/feedback";
+
+//关于
+"AboutVC_Title" = "About";
+"TermsVC_Title" = "Terms of Use and Privacy Policy";
+
+//账号
+"AVC_ChangePasswordTitle" = "Change Password";
+"AVC_Logout" = "Logout";
+"AVC_UnBind" = "Unbound";
+"AVC_BindPhone" = "Bind Mobile Phone";
+"AVC_BindEmail" = "Bind Email";
+"AVC_CancelBind" = "Unbind";
+"AVC_ChangeBind" = "Change binding";
+"AVC_Bind" = "Bound";
+//个人信息
+"PIVC_NameTitle" = "Name";
+"PIVC_GenderTitle" = "Gender";
+"PIVC_AgeTitle" = "Age";
+"PIVC_HeightTitle" = "Height";
+"PIVC_WeightTitle" = "Weight";
+"PIVC_GenderMale" = "Male";
+"PIVC_GenderFemale" = "Female";
+"PIVC_InputName" = "Please enter your name";
+"PIVC_Unit" = "Unit";
+//"PIVC_StandardUnit" = "Standard Unit";
+//"PIVC_EnglishUnit" = "English Unit";
+"PIVC_StandardUnit" = "Metric";
+"PIVC_EnglishUnit" = "Inch";
+
+
+//我的设备
+"MDVC_DeleteDevice" = "Unbound device";
+"MDVC_FailForDeleteDevice" = "Unbundling failed";
+"MDVC_DeleteDeviceAlert" = "whether or not unbound device?";
+"MDVC_BatteryTitle" = "Battery";
+"MDVC_BatteryCharge" = "Charging...";
+"MDVC_FirmwareTitle" = "Firmware Version";
+"MDVC_IDTitle" = "Device ID";
+"MDVC_BlueToothTitle" = "Bluetooth Address";
+"MDVC_CurrentVersion" = "Version:";
+"MDVC_NewestVersion" = "New Version:";
+"MDVC_NewestVersionError" = "Failed to obtain upgrade information.";
+"MDVC_NewestVersionAlert" = "New version detected, please update";
+//
+//选择日期  
+"SDVC_Title" = "Selection Date";
+
+"图文验证码" = "Graphic verification code";
+"请输入图片中的数字或字母" = "Please enter numbers or letters from the picture";
+"请先输入图文验证码" = "Please enter the graphic verification code first";
+"提醒" = "remind";
+"注销账号" = "Logout";
+"是否确认注销您的账号,确认后账号将会在三天内注销成功,注销成功后账号数据将被完全删除,不可恢复!请谨慎操作." = "Whether to confirm the cancellation of your account, the account will be successfully cancelled within three days after confirmation, and the account data will be completely deleted after the successful cancellation, which cannot be recovered! Please operate with caution.";

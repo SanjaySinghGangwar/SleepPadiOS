@@ -1,0 +1,111 @@
+//
+//  PrefixHeader.pch
+//  SleepBand
+//
+//  Created by admin on 2018/7/5.
+//  Copyright © 2018年 admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+
+//判断是否iPhone X
+//#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_iPhoneX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+#define  kStatusBarHeight      (IS_iPhoneX ? 44.f : 20.f)
+#define  kTabbarSafeHeight        (IS_iPhoneX ? 34.f : 0.f)
+#define  kTabbarHeight        49
+#define  kMargin 15
+#define WS(x) __weak __typeof(self)x = self;
+#define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define kControllerTitleFont [UIFont systemFontOfSize:17.0]
+#define kControllerTitleColor [UIColor colorWithHexString:@"#B1ACA8"]
+#define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//#define projectName @"sleepM"
+#define projectName @"sleepee"
+
+#define textFieldTextColor  [UIColor colorWithHexString:@"#575756"]
+#define textFieldPlaceholderColor  [UIColor colorWithHexString:@"#575756"]
+#define textFieldTextFont  [UIFont systemFontOfSize:14]
+#define textFieldBorderColor  [UIColor whiteColor]
+#define textFieldBackgroundColor  [UIColor clearColor]
+#define textFieldCornerRadius  10
+#define textFieldMarginTop  0
+#define textFieldHeight  47
+#define kAlpha 1
+#define kButtonAlpha 0.8
+#define kCellHeight 47
+#define kDismissWithDelayTime 1.5
+#define kDismissWithOutTime 5
+
+//#define PRIVACYPOLICYCN @"http://47.75.54.5:8080/sleep/user/privacypolicy?lang=zh-cn"
+//#define PRIVACYPOLICYEN @"http://47.75.54.5:8080/sleep/user/privacypolicy?lang=en-us"
+#define PRIVACYPOLICYCN @"http://cloud.znsdkj.com:8762/sleep/comm/statement"
+#define PRIVACYPOLICYEN @"http://cloud.znsdkj.com:8762/sleep/comm/statement?lang=en-US"
+
+//测试服务器域名
+#define NetWork_URL_Head_test @"http://test.znsdkj.com:8762/sleep"
+//正式服务器域名
+#define NetWork_URL_Head_cloud @"http://cloud.znsdkj.com:8762/sleep"
+//当前服务器域名
+#define GET_NetWork_URL_Head [[NSUserDefaults standardUserDefaults] stringForKey:@"the_sleepee_http_url_head"]
+
+//系统
+#import <Foundation/Foundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#define AppleLanguages_zh_CN @"zh-CN"
+#define AppleLanguages_en_US @"en-US"
+
+
+//model
+#import "SleepQualityModel.h"
+#import "TurnOverModel.h"
+#import "HeartRateModel.h"
+#import "RespiratoryRateModel.h"
+#import "UserModel.h"
+#import "AlarmClockModel.h"
+
+//工具
+//#import "NSData+Addittion.h"
+#import <SVProgressHUD.h>
+#import "MJRefresh.h"
+#import <Masonry.h>
+#import "UIColor+ColorChange.h"
+#import "UIFactory.h"
+#import "ClockTool.h"
+#import <SAMKeychain.h>
+#import <SAMKeychainQuery.h>
+#import <MJExtension/MJExtension.h>
+
+//通用类
+#import "LKDBHelper.h"
+#import "BlueToothTool.h"
+#import "BlueToothManager.h"
+#import "LeftView.h"
+#import "AlertView.h"
+
+#import "MSCoreManager.h"
+#import "LoginViewController.h"
+#import "SleepMainViewController.h"
+#import "ReportMainViewController.h"
+#import "AlarmClockMainViewController.h"
+#import "PersonalMainViewController.h"
+
+#import "AAGlobalMacro.h"
+
+//#import "SleepBand-Bridging-Header.h"
+//#import "Charts-Swift.h"
+
+//#import "ReportMainVC.h"
+
+#endif /* PrefixHeader_pch */
+

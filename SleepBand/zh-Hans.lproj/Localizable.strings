@@ -1,0 +1,359 @@
+/* 
+  Localizable.strings
+  SleepBand
+
+  Created by admin on 2018/7/5.
+  Copyright © 2018年 admin. All rights reserved.
+*/
+
+//通用
+"Country" = "中国";
+"DSVC_SelectDevice" = "选择设备开始绑定";
+"SDVC_Search" = "搜索";
+"Universal_Back" = "BACK";
+"Cancel" = "取消";
+"Confirm" = "提交";
+"OK" = "确认";
+"Next" = "下一步";
+"Phone" = "手机";
+"Email" = "邮箱";
+"Submit" = "确定";
+"Save" = "保存";
+"UnconnectedDevice" = "未连接设备";
+"SendSuccess" = "发送成功";
+"Success" = "成功";
+"SendFail" = "发送失败";
+"Fail" = "失败";
+"WhetherSynchronization" = "设备数据有更新,请同步数据";
+"WhetherBatteryCharging" = "设备电量低,请及时充电";
+"Synchronizationing" = "同步数据...";
+"Update" = "升级";
+"UpdateError" = "升级失败";
+"UpdateSuccess" = "升级成功";
+"Updateing" = "升级中...";
+"ErrorEmailUsed" = "邮箱已被使用";
+"ErrorPhoneUsed" = "手机号码已被使用";
+"ErrorEmailFail" = "邮件发送失败";
+"ErrorUserExist" = "用户已存在";
+"ErrorFileUploadFail" = "文件上传失败";
+"ErrorNetworkRequestFail" = "网络请求失败";
+"ErrorTokenPastDue" = "Token过期";
+"SaveError" = "保存失败";
+"SaveSuccess" = "保存成功";
+"EditError" = "编辑失败";
+"EditSuccess" = "编辑成功";
+"DeleteError" = "删除失败";
+"DeleteSuccess" = "删除成功";
+"OperationError" = "操作失败";
+"PullDownToRefresh" = "下拉可以刷新";
+"ReleaseToRefresh" = "松开立即刷新";
+"Loading" = "刷新中...";
+"PrivacyPolicy" = "隐私政策";
+//
+//选择设备
+"DSVC_Title" = "CHOOSE DEVICE";
+"DSVC_Join" = "JOIN";
+"DSVC_AlertTitle" = "The current application has logged in to the account,whether to confirm the exit.";
+"DSVC_AlertNoSelect" = "Please select the device.";
+//登录界面
+"LVC_Title" = "登录";
+"LVC_PhoneLogin" = "手机登录";
+"LVC_EmailLogin" = "邮箱登录";
+"LVC_PhoneCountryPlaceholder" = "请选择国家/地区";
+"LVC_PhonePlaceholder" = "请输入手机号码";
+"LVC_EmailPlaceholder" = "请输入邮箱地址";
+"LVC_PasswordPlaceholder" = "请输入密码";
+"LVC_Register" = "注册";
+"LVC_ForgotPassword" = "忘记密码";
+"LVC_AlertInputEmpty" = "输入信息不能为空";
+"LVC_AlertAccountPasswordError" = "账号密码错误";
+"LVC_AlertLoginFailed" = "登录失败";
+"LVC_AlertAccountUnregistered" = "该账号还没有注册";
+"LVC_AlertEmailFormatError" = "邮箱格式错误";
+"LVC_AlertPhoneFormatError" = "手机号码格式错误";
+"LVC_RememberPassword" = "记住密码";
+//注册界面
+"RVC_Title" = "注册";
+"RVC_PhoneRegister" = "手机注册";
+"RVC_EmailRegister" = "邮箱注册";
+"RVC_EmailForgot" = "邮箱找回";
+"RVC_PhoneNumForgot" = "手机找回";
+"RVC_PhoneNumBtn" = "Phone Number";
+"RVC_Code" = "验证码";
+"RVC_Password" = "Password";
+"RVC_SetPassword" = "输入密码";
+"RVC_ConfirmPassword" = "再一次输入密码";
+"RVC_SignIn" = "SIGN IN";
+"RVC_Send" = "发送验证码";
+"RVC_CodePlaceholder" = "请输入验证码";
+"RVC_AlertRegisterSuccess" = "Registration is successful, please remember your account and password.";
+"RVC_AlertUserExists" = "用户已存在";
+"RVC_AlertRegisterFail" = "注册失败";
+"RVC_AlertCodeError" = "验证码错误";
+"RVC_AlertCodePastDue" = "验证码过期";
+"RVC_AlertCodeFrequently" = "该账号获取验证码过于频繁，请5分钟后再获取";
+//"RVC_AgreeTitle" = "I have read and agreed to";
+//"RVC_AgreePrivacyPolicies" = "the use agreements and privacy policies";
+"RVC_AgreeTitle" = "我已经阅读并同意";
+"RVC_AgreePrivacyPolicies" = "使用协议和隐私政策";
+//地区选择界面
+"SACVC_Title" = "国家和地区";
+//忘记密码界面
+"FPVC_ForgotPassword" = "忘记密码";
+"FPVC_AccountPlaceholder" = "Phone Number / Email Addres";
+"FPVC_Next" = "NEXT";
+"FPVC_SetPassword" = "输入新密码";
+"FPVC_ConfirmPassword" = "再一次输入新密码";
+//搜索设备界面
+"SDVC_SearchTitle" = "搜索设备";
+"SDVC_HeaderTitle" = "选择设备";
+"SDVC_RefreshTitle" = "没有找到设备?点击刷新";
+"SDVC_SearchTableTitle" = "DEVICES";
+"SDVC_SearchNoDevice" = "No search devices,please click the search button to repack.";
+//蓝牙
+"BTM_BlueToothClose" = "请打开手机蓝牙";
+"BTM_BlueToothNoAuthorization" = "手机蓝牙未授权";
+"BTM_FailToConnectPeripheral" = "蓝牙连接失败";
+"BTM_SuccessToConnectPeripheral" = "蓝牙连接成功";
+"BTM_DeviceFailToConnect" = "设备断开连接";
+"BTM_DeviceMonitoring" = "搜索设备中...";
+"BTM_DeviceNoConnect" = "未连接设备";
+"BTM_DeviceOutTime" = "未找到目标设备，请确认设备已打开且在通信范围内！";
+//重设密码
+"RPVC_ResetPassword" = "设置密码";
+"RPVC_ConfirmPasswordPlaceholder" = "请确认密码";
+"RPVC_AlertResetSuccess" = "密码修改成功,请重新登录";
+"RPVC_AlertPasswordError" = "密码跟确认密码不一致";
+//睡眠
+"SMVC_Title" = "睡眠";
+"SMVC_HeartRateUnit" = "次/分";
+"SMVC_RespiratoryRateUnit" = "次/分";
+"SMVC_AlarmClockTitle" = "闹钟时间 ";
+//"SMVC_StartSleep" = "开始睡眠";
+//"SMVC_FinishSleep" = "结束睡眠";
+"SMVC_StartSleep" = "开始检测";
+"SMVC_FinishSleep" = "结束检测";
+"SMVC_HaveNewSleepData" = "您有新的睡眠报告";
+"SMVC_Look" = "查看";
+"SMVC_NoClock" = "未设置闹钟";
+//自动检测设置
+"ASSVC_Title" = "自动检测";
+"ASSVC_Message" = "请根据您的睡眠习惯设置睡眠时间";
+//实时检测
+"RTVC_Title" = "实时检测";
+"RTVC_HeartRateTitle" = "心率";
+"RTVC_RespiratoryRateTitle" = "呼吸率";
+//报告
+"RMVC_Title" = "报告";
+"RMVC_Monday" = "一";
+"RMVC_Tuesday" = "二";
+"RMVC_Wednesday" = "三";
+"RMVC_Thursday" = "四";
+"RMVC_Friday" = "五";
+"RMVC_Saturday" = "六";
+"RMVC_Sunday" = "日";
+"RMVC_Day" = "日";
+"RMVC_Week" = "周";
+"RMVC_Month" = "月";
+"RMVC_Yesterday" = "昨天";
+"RMVC_Today" = "今天";
+"RMVC_MoreData" = "点击查看更多数据";
+"RMVC_ActualSleepTime" = "实际睡眠时间";
+"RMVC_SleepsFor" = "段睡眠共";
+"RMVC_SleepNoData" = "当天没有睡眠数据";
+"RMVC_Hour" = "小时";
+"RMVC_Minute" = "分钟";
+"RMVC_Sober" = "清醒";
+"RMVC_LightSleep" = "浅睡";
+"RMVC_MiddleSleep" = "中睡";
+"RMVC_DeepSleep" = "深睡";
+"RMVC_DeepSleepTime" = "深睡时长";
+"RMVC_MiddleSleepTime" = "中睡时长";
+"RMVC_LightSleepTime" = "浅睡时长";
+"RMVC_SoberTime" = "清醒时长";
+"RMVC_AverageHeartRate" = "平均心率";
+"RMVC_AverageRespiratoryRate" = "平均呼吸率";
+"RMVC_SleepMonitoring" = "睡眠检测";
+"RMVC_TurnOver" = "翻身/体动";
+"RMVC_TurnOvertime" = "次";
+"RMVC_TurnOverHourTime" = "次/时";
+"RMVC_AverageLengthOfSleepStages" = "日均入睡时长";
+"RMVC_AverageSleepTime" = "日均睡眠时间";
+"RMVC_AverageLengthOfDeepSleep" = "日均深睡";
+"RMVC_AverageLengthOfLightSleep" = "日均浅睡";
+"RMVC_AverageLengthOfSober" = "日均梦/醒";
+"RMVC_AverageLengthOfMiddleSleep" = "日均中睡";
+"RMVC_SleepLatency" = "入睡时间";
+"RMVC_GetUpTime" = "起床时间";
+"RMVC_FrequencyOfWakeUp" = "清醒次数";
+"RMVC_FrequencyOfBedAway" = "离床次数";
+//编辑报告自定义视图
+"ECVC_EditTitle" = "编辑";
+"ECVC_Show" = "已显示";
+"ECVC_UnShow" = "未显示";
+//闹钟
+"ACMVC_Title" = "闹钟";
+"ACMVC_Add" = "添加闹钟";
+"ACMVC_Delete" = "删除闹钟";
+"ACMVC_Tips" = "提示";
+"ACMVC_Close" = "关闭闹钟";
+"ACMVC_GetDeviceClockError" = "获取设备闹钟失败";
+"ACMVC_IntelligentClock" = "智能闹钟";
+"ACMVC_GeneralClock" = "普通闹钟";
+"ACMVC_GoToBedEarlyClock" = "早睡";
+"ACMVC_NurseClock" = "看护";
+"ACMVC_GetUpClock" = "起床";
+"ACMVC_General" = "普通";
+"ACMVC_GetUp" = "起床";
+"ACMVC_GoToBedEarly" = "早睡";
+"ACMVC_Nurse" = "看护";
+"ACMVC_Everyday" = "每日";
+"ACMVC_Sunday" = "周日";
+"ACMVC_Monday" = "周一";
+"ACMVC_Tuesday" = "周二";
+"ACMVC_Wednesday" = "周三";
+"ACMVC_Thursday" = "周四";
+"ACMVC_Friday" = "周五";
+"ACMVC_Saturday" = "周六";
+"ACMVC_Everyday" = "每天";
+"ACEVC_EditClockTitle" = "编辑闹钟";
+"ACEVC_TimeTitle" = "时间";
+"ACEVC_DeviceTitle" = "提醒设备";
+"ACEVC_DevicePhone" = "手机";
+"ACEVC_DeviceSleep" = "睡眠带";
+"ACEVC_MusicTitle" = "音乐";
+"ACEVC_CycleTitle" = "周期";
+"ACEVC_RemindLaterTitle" = "稍后提醒";
+"ACEVC_IntelligentWakeTitle" = "智能唤醒";
+"ACEVC_EarlySleepRemindTitle" = "早睡提醒";
+"ACEVC_TypeTitle" = "类型";
+"ACEVC_CycleNull" = "周期未选择";
+"ACEVC_ClockIsFull" = "睡眠带闹钟个数已满,保存失败";
+"ACEVC_IntelligentClockIsFull" = "智能闹钟已存在";
+"GeneralClockNotificationBody" = "普通闹钟";
+"NurseClockNotificationBody" = "该吃药啦~~";
+"GoToBedEarlyClockNotificationBody" = "该睡觉啦~~";
+"GetUpClockNotificationBody" = "该起床啦~~";
+
+//音乐
+"ACMVC_MusicTitle" = "音乐";
+"ACMVC_DownloadedTitle" = "已下载";
+"ACMVC_RecommendDownloadedTitle" = "推荐下载";
+//个人
+"PMVC_Title" = "我的";
+"PMVC_Hi" = "您好 ";
+"PMVC_SynchronousDataTitle" = "同步服务器数据";
+"PMVC_MyDeviceTitle" = "我的设备";
+"PMVC_AccountTitle" = "账号管理";
+"PMVC_PersonalInformationTitle" = "个人信息";
+"PMVC_HelpTitle" = "帮助中心";
+"PMVC_FeedbackTitle" = "意见反馈";
+"PMVC_SleepAdviceTitle" = "睡眠建议";
+"PMVC_AboutTitle" = "关于";
+
+//帮助
+"PMVC_CommonProblemTitle" = "常见问题";
+"PMVC_Title1" = "新手操作指南";
+"PMVC_Title2" = "设备的检测原理是什么?";
+"PMVC_Title3" = "设备工作时，可以将手机关机吗?";
+"PMVC_Title4" = "可不可以远程控制设备?";
+"PMVC_Title5" = "我的睡眠数据，可以存储多久?";
+"PMVC_Title6" = "手机连接设备失败?";
+"PMVC_Title7" = "在双人床上使用设备可以么?";
+"PMVC_Title8" = "我检测了睡眠但是没有生成睡眠报告";
+"PMVC_Title9" = "我设置的手机闹钟为什么没有响?";
+"PMVC_Title10" = "初次使用设备如何配置?";
+"PMVC_Title11" = "手机与设备断开连接后如何恢复连接?";
+
+//新手操作指南
+"PMVC_DeviceConnection" = "连接设备";
+"PMVC_SleepStatistic" = "睡眠统计";
+"PMVC_SleepStatisticTitle1" = "NO.1 开始检测和结束检测";
+"PMVC_SleepStatisticTitle2" = "NO.2 睡眠报告";
+"PMVC_Step" = "步骤";
+"PMVC_Step1Message" = "长按设备开关直到蓝灯亮起";
+"PMVC_Step2Message" = "打开手机蓝牙";
+"PMVC_Step3Message" = "打开手机App完成注册/登录操作";
+"PMVC_Step4Message" = "搜索-连接设备,连接成功后设备指示灯变为蓝色";
+"PMVC_Step5Message" = "在睡眠界面点击“开始检测”开始检测，手机开始检测用户的心率及呼吸率;点击“结束检测”即结束检测，手机不会再显示用户的心率以及呼吸率";
+"PMVC_Step6Message" = "当用户使用睡眠带完成一段睡眠之后，可以在报告中查看当次睡眠的睡眠状况";
+
+"PMVC_Info1" = "通过硬件设计采集人体睡眠状态下呼吸引起的微小信号变化，通过这些信号处理提取出呼吸率、心率等生理特征信号进行统计分析，根据睡眠算法分析出睡眠报告。";
+"PMVC_Info2" = "开始睡眠检测后，可以断开手机蓝牙、关闭APP、关闭手机， 7天内重新开启APP即可同步数据并生成睡眠报告。";
+"PMVC_Info3" = "设备通过BLE与手机连接，蓝牙覆盖范围内可以远程控制。";
+"PMVC_Info4" = "睡眠带上数据最大存储7天数据。";
+"PMVC_Info5" = "1.确认设备电池电量充足。\n2.确认设备已开机。\n3.检查设备与手机的距离是否已超过蓝牙信号覆盖范围。";
+"PMVC_Info6" = "可以。虽然旁边人的信号会有所干扰，但对检测准确度的影响很小。设备默认检测躺在其上的用户。";
+"PMVC_Info7" = "确保手机与设备连接成功，请点击报告页右上角的”同步”按钮进行同步。";
+"PMVC_Info8" = "1.检查是否正确配置了智能闹钟模式。\n2.在系统“设置>通知,查看应用是否允许通知。\n3.将闹钟设置在“设置>勿扰模式”中的设定时间之内。\n4.使用耳机时无法外放响铃。\n5.闹钟铃声被调至最小。";
+"PMVC_Info9" = "1.长按设备开关至蓝色灯亮起。\n2.开启手机蓝牙开关。\n3.打开手机APP完成注册/登录操作。\n4.连接搜索到的设备ID，看到设备指示灯变为蓝色长亮表示配置成功。";
+"PMVC_Info10" = "1.打开APP，完成登录操作。\n2.点击页面中右上角连接按钮重新连接设备。";
+
+//睡眠建议
+"SAVC_SleepQualityTitle" = "睡眠质量";
+"SAVC_WhatAreTheStagesOfSleepTitle" = "人的睡眠状态";
+"SAVC_NationalSleepFoundationSleepDurationRecommendationsTitle" = "各年龄阶段建议睡眠时间";
+"SAVC_AdvicesForFallAsleepQuicklyTitle" = "快速入睡的方法";
+"SAVC_RespiratoryRateTitle" = "呼吸率";
+"SAVC_HeartRateTitle" = "心率";
+
+"SAVC_Info1" = "人的夜间睡眠，一般分5到6个周而复始的周期，研究表明睡眠的长度并不影响我们醒来时的清醒程度而是我们完成了多少个完整的睡眠周期,每个睡眠周期约90分钟。根据睡眠中脑电波、肌电波及眼球活动的变化，睡眠周期由浅睡期、轻睡期、中睡期、深睡期和快速眼动周期组成。而占整个睡眠时间大约55%的浅睡期和轻睡期，对解除疲劳作用甚微，只有进入深睡眠状态的中睡期、深睡期及快速眼动睡眠期，才对解除疲劳有较大作用。因此对睡眠好坏的评价，不能光看时间，更重 要的是看深度睡眠时间的长短。 “深度睡眠”是你入睡以后大脑不进行活动的深度休息。\n如果我们睡得很完整，很自然，不使用闹 钟把我们叫醒的话，我们将会在90分钟的倍数后醒来。例如，6小时，7个半小时或9小时，而不是7小时或8小时。在两个睡眠阶段之间，我们实际上并没有在睡，而是处于两个阶段的交接阶段，如果我们没有被打扰的话，我们很自然地进入下一个睡眠周期。一个只睡4个周期(6小时)的人将会比一个被打断完整周期的睡8个小时，10个小时的人感觉更好。";
+"SAVC_Info2" = "睡眠状态指人在睡觉时，表现出来的形态。与清醒状态相对，人睡觉有五个阶段的。分别是：浅睡、轻睡、中睡、深睡及快速眼动期，每一周期的睡眠过程也可由浅至深分为五个睡眠阶段。\n1.浅睡阶段\n从昏昏欲睡开始，逐渐入睡，不再保持觉醒状态。这时候，呼吸变慢，肌肉张力下降，身体轻度放松，此时属于浅睡状态，睡眠者较易被外界声音或触动所唤醒。\n2.轻睡阶段\n本阶段睡眠属轻睡或轻度至中度睡眠状态，睡眠者已不易被唤醒，此时肌肉进一步放松，脑电图显示梭状睡眠波。\n3.中睡和深睡阶段\n这时候睡眠者进入中睡或深度睡眠状态，肌张力消失，肌肉充分松弛，感觉功能进一步降低，更不易被唤醒。\n睡眠的生理修复功效大多产生于这一阶段，比如生长激素分泌量的增加，生长激素能促进新细胞生长和组织的修复、让人体能在日常劳作后获得休整，恢复生机和活力。我们希望在每晚的睡眠时间中，深睡眠能占20%左右。\n4.快速眼动期\n在这个阶段，眼球会呈现快速跳动现象，通常会有翻身的动作，并很容易惊醒。但是通常情况下，我们不会记得自己曾经醒来，然后就进入下一个睡眠周期，如果此时将其唤醒，大部分人报告说正在做梦。";
+"SAVC_Info3" = "新生儿（0~3个月）一天睡眠时间为14到17个小时\n婴  儿（4~11个月）一天睡眠时间为12到15个小时\n幼  儿（1~2岁）一天睡眠时间为11到14个小时\n学龄前（3~5岁）一天睡眠时间为10到13个小时\n学龄儿童（6~13岁）一天睡眠时间为9到11个小时\n青少年（14~17岁）一天睡眠时间为8到10个小时\n轻年人（18~25岁）一天睡眠时间为7到9个小时\n成年人（26~64岁）一天睡眠时间为7到9个小时\n老年人（65岁以上）一天睡眠时间为7到8个小时\n--以上数据来自美国国家睡眠基金会";
+"SAVC_Info4" = "1.自我放松训练\n卧在床上，闭眼，自然呼吸。然后把注意力集中在双手或双脚上，全身肌肉极度放松，用沉重感来体验肌肉的松驰程度。默念自我暗示的语句：“我的脚越来越沉重了”，“我的下肢越来越沉重了”....“我的全身都越来越沉重了”。一意识到与四肢沉重感无关的意念，应立即停止，把注意力集中到对手脚沉重感的体验上，患者一般都能在练习过程中放松入睡。坚持一段时间训练此法，有良好效果。\n2.音乐疗法\n临睡前，来一段柔和、单调的音乐可能有一定的效果。听到好的音乐，就象一个夏夜乘凉的孩子坐在老槐树上倾听老祖母讲述美丽的神话故事那样，叫人心旷神怡，暂时忘记烦恼，心情放松，从而安然入睡。\n3.饮一杯温热的牛奶\n牛奶中的钙是一种镇静物质。饮温热饮料是一种很好的习惯，可以使身体放松，犹如一天生活结束时的奖赏。牛奶中含有两种催眠物质。一种是能够促进睡眠血清素合成的原料L色氨酸，由于L色氨酸的作用，往往只需一杯牛奶就可以使人入睡。另一种是对机体生理功能具有调节作用的肽类，其中有数种“类鸦片肽”，这些物质可以和中枢神经或末梢鸦片肽受体结合，发挥类似鸦片的麻醉镇痛作用，使全身产生舒适感，有利于入睡和解除疲劳，且又不会使人成瘾。牛奶对体虚而致神经衰弱者的催眠作用尤为明显。因此，临睡前可以饮一杯温牛奶。\n4.睡觉前先洗个澡\n临睡前60—75分钟洗个热水澡，使身体放松，因为洗澡可以提高体温，使人困倦。睡前洗澡要养成习惯。不过要注意以下几个问题：1，水温 以37—40摄氏度为宜，超过40摄氏度会加快心跳、刺激交感神经，使人过于兴奋，难以入睡。洗澡后体温上升0.5—1摄氏度有利于进入深睡眠，如果体温上升超过2摄氏度则不利于入睡。2，时间 以在37—40摄氏度的温水中泡20—30分钟为宜。人在体温下降时容易入睡，而入浴后体温会有所上升，所以最好出浴后先稍事间隔，待体温下降后再就寝。\n5.睡前1小时远离电视、电脑\n睡前1小时要远离电视，因为电视屏幕闪烁的光线会使人神经兴奋而影响睡眠。临睡前使用电脑，可能给睡眠带来不良影响。研究显示，体温在白天活动时会升高，而夜间睡眠时，体温会降低。如果两者温差大，就容易获得深度睡眠。那些睡眠浅的人，则多是白天体温不高，夜间体温也不低，神经温差小的缘故。在睡前，使用电脑的过程中，明亮的显示屏，开闭程序的活动，都对眼睛和神经系统有强烈的刺激，使体温处于相对较高的工作状态。中枢神经昼夜温差小，睡眠质量自然也就差了。不妨睡前用温水洗澡，喝一杯热牛奶，可以减轻睡眠不良的症状。";
+"SAVC_Info5" = "正常成年人每分钟呼吸大约16-20次。呼吸与脉搏的比是1：4，即每呼吸1次，脉搏搏动4次。小儿呼吸比成人快，每分钟可达20～30次；新生儿的呼吸频率可达每分钟44次, 随着年龄的增长而逐渐减慢。正常成人静息状态下，呼吸为12到18次/分，呼吸与脉搏之比为1：4。\n1.呼吸过速\n指呼吸频率超过24次/分而言。见于发热、疼痛、贫血、甲状腺功能亢进及心力衰竭等。一般体温升高1℃，呼吸大约增加4次/分。\n2.呼吸过缓\n指呼吸频率低于12次/分而言。呼吸浅慢见于麻醉剂或镇静剂过量和颅内压增高等。";
+"SAVC_Info6" = "心率是指正常人安静状态下每分钟心跳的次数，也叫心率，一般为60-100次/分，可因年龄、性别或其他生理因素产生个体差异。一般来说，年龄越小，心率越快，老年人心跳比年轻人慢，女性的心率比同龄男性快，这些都是正常的生理现象。安静状态下，成人正常心率为60～100次/分钟，理想心率应为55～70次/分钟(运动员的心率较普通成人偏慢，一般为50次/分钟左右)。\n心率变化与心脏疾病密切相关。成人安静时心率超过100次/分钟(一般不超过160次/分钟)，称为窦性心动过速，常见于兴奋、激动、吸烟、饮酒、喝浓茶或咖啡后，或见于感染、发热、休克、贫血、缺氧、甲亢、心力衰竭等病理状态下，或见于应用阿托品、肾上腺素、麻黄素等药物后。\n成人安静时心率低于60次/分钟(一般在45次/分钟以上)，称为窦性心动过缓，可见于长期从事重体力劳动的健康人和运动员；或见于甲状腺机能低下、颅内压增高、阻塞性黄疸以及洋地黄、奎尼丁或心得安类药物过量。如果心率低于40次/分钟，应考虑有病态窦房结综合征、房室传导阻滞等情况。如果脉搏强弱不等、不齐且脉率少于心率，应考虑心房纤颤。如果心率超过160次/分钟，或低于40次/分钟，大多见于心脏病患者，如常伴有心悸、胸闷等不适感，应及早进行详细检查，以便针对病因进行治疗。";
+
+
+//反馈
+"IVC_PlaceHolder" = "请描述您遇到的问题，我们会仔细聆听。";
+
+//关于
+"AboutVC_Title" = "关于";
+//
+"TermsVC_Title" = "使用条款和隐私政策";
+
+//账号
+"AVC_ChangePasswordTitle" = "修改密码";
+"AVC_Logout" = "退出登录";
+"AVC_UnBind" = "未绑定";
+"AVC_BindPhone" = "绑定手机";
+"AVC_BindEmail" = "绑定邮箱";
+"AVC_CancelBind" = "取消绑定";
+"AVC_ChangeBind" = "更改绑定";
+"AVC_Bind" = "绑定";
+//个人信息
+"PIVC_NameTitle" = "昵称";
+"PIVC_GenderTitle" = "性别";
+"PIVC_AgeTitle" = "年龄";
+"PIVC_HeightTitle" = "身高";
+"PIVC_WeightTitle" = "体重";
+"PIVC_GenderMale" = "男";
+"PIVC_GenderFemale" = "女";
+"PIVC_InputName" = "请输入昵称";
+"PIVC_Unit" = "单位";
+"PIVC_StandardUnit" = "公制";
+"PIVC_EnglishUnit" = "英制";
+//我的设备
+"MDVC_DeleteDevice" = "解绑设备";
+"MDVC_FailForDeleteDevice" = "解绑失败";
+"MDVC_DeleteDeviceAlert" = "是否解绑设备";
+"MDVC_BatteryTitle" = "电量";
+"MDVC_BatteryCharge" = "充电中...";
+"MDVC_FirmwareTitle" = "固件版本";
+"MDVC_IDTitle" = "设备ID";
+"MDVC_BlueToothTitle" = "蓝牙地址";
+"MDVC_CurrentVersion" = "当前版本:";
+"MDVC_NewestVersion" = "最新版本:";
+"MDVC_NewestVersionError" = "获取升级信息失败";
+"MDVC_NewestVersionAlert" = "检测到新版本，请更新";
+//Discover new firmware version, upgrade?
+//选择日期
+"SDVC_Title" = "选择日期";
+
+"图文验证码" = "图文验证码";
+"请输入图片中的数字或字母" = "请输入图片中的数字或字母";
+"请先输入图文验证码" = "请先输入图文验证码";
+"提醒" = "提醒";
+"注销账号" = "注销账号";
+"是否确认注销您的账号,确认后账号将会在三天内注销成功,注销成功后账号数据将被完全删除,不可恢复!请谨慎操作." = "是否确认注销您的账号,确认后账号将会在三天内注销成功,注销成功后账号数据将被完全删除,不可恢复!请谨慎操作.";
