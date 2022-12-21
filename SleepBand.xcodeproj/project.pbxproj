@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4AC958CE1F91B7CAD555C252 /* Pods_SleepBand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEAAA439B351AED0BBB4DA7 /* Pods_SleepBand.framework */; };
+		697DF52C291982A800197360 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697DF52B291982A800197360 /* LoginViewController.xib */; };
+		6989B72F291A2D61008FA36C /* WelcomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989B72E291A2D61008FA36C /* WelcomePageViewController.xib */; };
+		6999EFF7291EC497000ECBCF /* SearchDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6999EFF6291EC497000ECBCF /* SearchDeviceViewController.xib */; };
+		6999EFFB291ECD20000ECBCF /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6999EFF9291ECD20000ECBCF /* DeviceCell.m */; };
+		6999EFFC291ECD20000ECBCF /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6999EFFA291ECD20000ECBCF /* DeviceCell.xib */; };
 		8404BA8B21C0B00C00D711EC /* data9791273855 in Resources */ = {isa = PBXBuildFile; fileRef = 8404BA7E21C0B00C00D711EC /* data9791273855 */; };
 		8404BA8C21C0B00C00D711EC /* data953639629 in Resources */ = {isa = PBXBuildFile; fileRef = 8404BA7F21C0B00C00D711EC /* data953639629 */; };
 		8404BA8D21C0B00C00D711EC /* data9536383096 in Resources */ = {isa = PBXBuildFile; fileRef = 8404BA8021C0B00C00D711EC /* data9536383096 */; };
@@ -323,6 +328,12 @@
 /* Begin PBXFileReference section */
 		301622C8285F08C5A017EEFF /* Pods-SleepBand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.release.xcconfig"; sourceTree = "<group>"; };
 		3A2895D89F3641C8C5875F48 /* Pods-SleepBand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.debug.xcconfig"; sourceTree = "<group>"; };
+		697DF52B291982A800197360 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		6989B72E291A2D61008FA36C /* WelcomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomePageViewController.xib; sourceTree = "<group>"; };
+		6999EFF6291EC497000ECBCF /* SearchDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDeviceViewController.xib; sourceTree = "<group>"; };
+		6999EFF8291ECD20000ECBCF /* DeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		6999EFF9291ECD20000ECBCF /* DeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		6999EFFA291ECD20000ECBCF /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		6EEAAA439B351AED0BBB4DA7 /* Pods_SleepBand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepBand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8404BA7E21C0B00C00D711EC /* data9791273855 */ = {isa = PBXFileReference; lastKnownFileType = file; path = data9791273855; sourceTree = "<group>"; };
 		8404BA7F21C0B00C00D711EC /* data953639629 */ = {isa = PBXFileReference; lastKnownFileType = file; path = data953639629; sourceTree = "<group>"; };
@@ -947,8 +958,10 @@
 				84AAFAFA228E987300C9F037 /* cell */,
 				84672A9F20F33C1000E688B9 /* SearchDeviceViewController.h */,
 				84672AA020F33C1000E688B9 /* SearchDeviceViewController.m */,
+				6999EFF6291EC497000ECBCF /* SearchDeviceViewController.xib */,
 				846D953020EDFB9B009EF565 /* LoginViewController.h */,
 				846D952D20EDFB9B009EF565 /* LoginViewController.m */,
+				697DF52B291982A800197360 /* LoginViewController.xib */,
 				846D953220EDFB9B009EF565 /* RegisterViewController.h */,
 				846D953520EDFB9C009EF565 /* RegisterViewController.m */,
 				846D953420EDFB9C009EF565 /* ResetPasswordViewController.h */,
@@ -1368,6 +1381,7 @@
 				84672AEC20F8529300E688B9 /* TabBarViewController.m */,
 				846B353E211D33190025CEC1 /* WelcomePageViewController.h */,
 				846B353F211D33190025CEC1 /* WelcomePageViewController.m */,
+				6989B72E291A2D61008FA36C /* WelcomePageViewController.xib */,
 				84164F742212A60800698220 /* MainViewController.h */,
 				84164F752212A60800698220 /* MainViewController.m */,
 				84164F772212BB7500698220 /* LeftView.h */,
@@ -1447,6 +1461,9 @@
 				84672AE920F83B9800E688B9 /* UniversalTableViewCell.m */,
 				84672AB420F5E7F100E688B9 /* CycleTableViewCell.h */,
 				84672AB520F5E7F100E688B9 /* CycleTableViewCell.m */,
+				6999EFF8291ECD20000ECBCF /* DeviceCell.h */,
+				6999EFF9291ECD20000ECBCF /* DeviceCell.m */,
+				6999EFFA291ECD20000ECBCF /* DeviceCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1630,6 +1647,7 @@
 				8476CBD5221D59230039C181 /* me_btn_logout@3x.png in Resources */,
 				8404BA9121C0B00C00D711EC /* data9791563482 in Resources */,
 				8404BA9621C0B00C00D711EC /* LKDB.db in Resources */,
+				697DF52C291982A800197360 /* LoginViewController.xib in Resources */,
 				8476CB79221D59220039C181 /* me_btn_save@2x.png in Resources */,
 				8476CB83221D59220039C181 /* alarm_time_hour@2x.png in Resources */,
 				8476CBB8221D59230039C181 /* menu_icon_alarm@2x.png in Resources */,
@@ -1671,6 +1689,7 @@
 				8476CBA1221D59220039C181 /* signup_icon_password@2x.png in Resources */,
 				846D952220EDF8A7009EF565 /* Localizable.strings in Resources */,
 				845AEBB121226B5600CE1831 /* Main.storyboard in Resources */,
+				6999EFFC291ECD20000ECBCF /* DeviceCell.xib in Resources */,
 				8476CBF7221D59230039C181 /* signup_icon_agreement_ok@3x.png in Resources */,
 				8476CC23221D59230039C181 /* searchdevice_refresh@3x.png in Resources */,
 				8476CB6D221D59220039C181 /* sleep_bg_alarm@2x.png in Resources */,
@@ -1726,6 +1745,7 @@
 				8476CBF6221D59230039C181 /* signup_icon_back@3x.png in Resources */,
 				8476CBCE221D59230039C181 /* me_operationguide_icon_two@3x.png in Resources */,
 				8476CBF3221D59230039C181 /* me_box_bg@3x.png in Resources */,
+				6989B72F291A2D61008FA36C /* WelcomePageViewController.xib in Resources */,
 				8476CBE5221D59230039C181 /* sleep_icon_connect@3x.png in Resources */,
 				8476CBAD221D59230039C181 /* alarm_btn_add@2x.png in Resources */,
 				8476CB71221D59220039C181 /* me_version_icon@2x.png in Resources */,
@@ -1780,6 +1800,7 @@
 				8476CBA5221D59220039C181 /* sleep_icon_alarm@2x.png in Resources */,
 				8476CB74221D59220039C181 /* signup_icon_agreement@2x.png in Resources */,
 				8477CBC922A52C5D0039BFF3 /* AAJSFiles.bundle in Resources */,
+				6999EFF7291EC497000ECBCF /* SearchDeviceViewController.xib in Resources */,
 				8476CB99221D59220039C181 /* signup_btn_signup@2x.png in Resources */,
 				8404BA8B21C0B00C00D711EC /* data9791273855 in Resources */,
 				8476CB77221D59220039C181 /* me_btn_logout@2x.png in Resources */,
@@ -1840,6 +1861,7 @@
 				8477CBCA22A52C5D0039BFF3 /* AAAreaspline.m in Sources */,
 				846B3537211C18760025CEC1 /* TurnOverModel.m in Sources */,
 				8477CBCB22A52C5D0039BFF3 /* AALabels.m in Sources */,
+				6999EFFB291ECD20000ECBCF /* DeviceCell.m in Sources */,
 				84672AAA20F4939600E688B9 /* AlarmClockTableViewCell.m in Sources */,
 				845AEBB721227C0700CE1831 /* SleepQualityModel.m in Sources */,
 				849D3EBD22840D01003D73E9 /* ReportMainVC.m in Sources */,
@@ -2137,7 +2159,7 @@
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.2.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = vip.inteltech.SleepEE;
+				PRODUCT_BUNDLE_IDENTIFIER = sleeppad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ENABLE_BATCH_MODE = NO;
@@ -2183,7 +2205,7 @@
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.2.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = vip.inteltech.SleepEE;
+				PRODUCT_BUNDLE_IDENTIFIER = sleeppad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ENABLE_BATCH_MODE = NO;

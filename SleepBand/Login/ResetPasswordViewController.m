@@ -240,7 +240,7 @@
             if ([SAMKeychain setPassword:password forService:serviceName account:account]) {
                 NSLog(@"存储账号密码成功");
             }
-            SearchDeviceViewController *search = [[SearchDeviceViewController alloc]init];
+            SearchDeviceViewController *search = [[SearchDeviceViewController alloc]initWithNibName:@"SearchDeviceViewController" bundle: [NSBundle mainBundle]];
             search.isPushWithLogin = YES;
             [weakSelf.navigationController pushViewController:search animated:YES];
         }else{

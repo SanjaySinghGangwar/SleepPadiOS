@@ -27,9 +27,9 @@
 @property (strong,nonatomic)UITextField *phoneNumCountryField;
 @property (strong,nonatomic)UILabel *phoneNumAreacodeLabel;
 @property (strong,nonatomic)UITextField *phoneNumTextField;
-@property (strong,nonatomic)UITextField *emailTextField;
-@property (strong,nonatomic)UITextField *passwordTextField;
-@property (strong,nonatomic)UIButton *loginButton;
+@property (strong,nonatomic)IBOutlet UITextField *emailTextField;
+@property (strong,nonatomic)IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong,nonatomic)UIButton *registerButton;
 @property (strong,nonatomic)UIButton *forgotButton;
 @property (strong,nonatomic)UIView *passwordTextView;
@@ -42,6 +42,23 @@
 @property (copy,nonatomic)NSString *emailString;
 @property (strong,nonatomic)UIButton *rememberBtn;
 @property (assign, nonatomic) BOOL isRemember;
+@property (weak, nonatomic) IBOutlet UIImageView *signInSelectorImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *signUpSelectorImageView;
+@property (weak, nonatomic) IBOutlet UIView *signUpView;
+@property (weak, nonatomic) IBOutlet UIView *signInView;
+
+/// Sign up Fields
+@property (weak, nonatomic) IBOutlet UITextField *signUpEmailField;
+@property (weak, nonatomic) IBOutlet UITextField *signUpPasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *signUpConfirmPasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *signUpPinCodeField;
+
+@property (strong,nonatomic)IBOutlet UIButton *signUpSendButton;
+@property (strong,nonatomic)NSTimer *sendTimer;
+@property (assign,nonatomic)int sendTime;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
+
+
 @end
 
 @implementation LoginViewController
@@ -56,10 +73,25 @@
 {
     return NO;
 }
+
+-(BOOL)hasTopNotch {
+    if (@available( iOS 11.0, * )) {
+        if ([[[UIApplication sharedApplication] keyWindow] safeAreaInsets].bottom > 0) {
+            return YES;
+        }
+    }
+    return NO;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([self hasTopNotch] == YES) {
+        [self.heightConstraint setConstant:90];
+    } else {
+        [self.heightConstraint setConstant:60];
+    }
     self.networkManager  = [MSCoreManager sharedManager];
-    
+    self.emailTextField.text = @"thehelpfulak@gmail.com";
+    self.passwordTextField.text = @"12345678";
     //获取缓存User
     [self getLastAccount];
     
@@ -284,7 +316,7 @@
         
     }else{
         //  没有连接过设备就跳到选择设备界面
-        SearchDeviceViewController *search = [[SearchDeviceViewController alloc]init];
+        SearchDeviceViewController *search = [[SearchDeviceViewController alloc]initWithNibName:@"SearchDeviceViewController" bundle: [NSBundle mainBundle]];
         search.isPushWithLogin = YES;
         [self.navigationController pushViewController:search animated:YES];
     }
@@ -320,6 +352,186 @@
 -(void)forgotPassword{
     [self exitEdit];
     [self.navigationController pushViewController:[[RegisterViewController alloc] init] animated:YES];
+}
+
+#pragma mark - Selector actions
+
+- (IBAction)signInSelectorClicked:(id)sender {
+    [self hideSelectorViews];
+    [_signInView setHidden:FALSE];
+    [_signInSelectorImageView setHidden:FALSE];
+}
+- (IBAction)signUpSelectorClicked:(id)sender {
+    [self hideSelectorViews];
+    [_signUpView setHidden:FALSE];
+    [_signUpSelectorImageView setHidden:FALSE];
+}
+
+-(void)hideSelectorViews {
+    [_signInSelectorImageView setHidden:YES];
+    [_signUpSelectorImageView setHidden:YES];
+    [_signInView setHidden:YES];
+    [_signUpView setHidden:YES];
+}
+
+#pragma mark - Sign up Actions
+
+- (IBAction)btnSignUpClicked:(id)sender {
+    [self signUp];
+}
+- (IBAction)btnSendPinCodeClicked:(id)sender {
+    [self codeSend];
+}
+
+-(void)codeSend {
+    WS(weakSelf);
+    if (self.signUpEmailField.text.length > 0) {
+        if([self checkSignUpInformation]){
+            if (self.signUpSendButton.userInteractionEnabled) {
+                [self exitEdit];
+                NSDictionary *dict;
+                
+                dict = @{
+                         @"type":@"2",
+                         @"areaCode":@"",
+                         @"phoneNumber":@"",
+                         @"email":self.signUpEmailField.text
+                         };
+
+                if (self.sendTimer == nil) {
+                    self.sendTime = 60;
+                    self.sendTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+                }
+                [self.sendTimer setFireDate:[NSDate date]];
+                [self.networkManager getVerificationCodeForData:dict WithResponse:^(ResponseInfo *info) {
+                    if ([info.code isEqualToString:@"200"]) {
+                        [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"SendSuccess", nil)];
+                        [SVProgressHUD dismissWithDelay:kDismissWithDelayTime];
+                    }else{
+                        [SVProgressHUD showErrorWithStatus:info.message];
+                        [SVProgressHUD dismissWithDelay:kDismissWithDelayTime];
+                        [weakSelf.sendTimer setFireDate:[NSDate distantFuture]];
+                        weakSelf.sendTime = 60;
+                        weakSelf.signUpSendButton.userInteractionEnabled = YES;
+                        [weakSelf.signUpSendButton setTitle:NSLocalizedString(@"RVC_Send", NIL) forState:UIControlStateNormal];
+                    }
+                }];
+            }
+        }
+    }else{
+        [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"LVC_AlertInputEmpty", nil)];
+        [SVProgressHUD dismissWithDelay:kDismissWithDelayTime];
+    }
+}
+
+-(void)countDown{
+    if (self.sendTime == 1) {
+        [self.sendTimer setFireDate:[NSDate distantFuture]];
+        self.sendTime = 60;
+        self.signUpSendButton.userInteractionEnabled = YES;
+        [self.signUpSendButton setTitle:NSLocalizedString(@"RVC_Send", NIL) forState:UIControlStateNormal];
+    }else{
+        if (self.sendTime == 60) {
+            self.signUpSendButton.userInteractionEnabled = NO;
+        }
+        self.sendTime -- ;
+        [self.signUpSendButton setTitle:[NSString stringWithFormat:@"%ds",self.sendTime] forState:UIControlStateNormal];
+    }
+    
+}
+
+-(BOOL)checkSignUpInformation {
+    //检查邮箱格式
+    NSString *emailRegex = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",emailRegex];
+    if(![pre evaluateWithObject:self.signUpEmailField.text]){
+        [self alert:NSLocalizedString(@"LVC_AlertEmailFormatError", nil)];
+        return NO;
+    }
+    return YES;
+}
+
+-(void)signUp{
+    WS(weakSelf);
+    if ((self.signUpEmailField.text.length > 0) && self.signUpPinCodeField.text.length >0 && self.signUpPasswordField.text.length >0 && self.signUpConfirmPasswordField.text.length >0) {
+        if([self checkSignUpInformation]){
+            if ([self.signUpPasswordField.text isEqualToString:self.signUpConfirmPasswordField.text]) {
+                [SVProgressHUD show];
+                [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+                
+                NSDictionary *dict = @{
+                                       @"type": @"2",
+                                       @"phoneNumber": @"",
+                                       @"email": self.signUpEmailField.text,
+                                       @"areaCode": @"",
+                                       @"password": self.signUpPasswordField.text,
+                                       @"verifyCode":self.signUpPinCodeField.text
+                                       };
+                
+                    //注册
+                    [weakSelf.networkManager postRegisterForData:dict WithResponse:^(ResponseInfo *info) {
+                        [SVProgressHUD dismiss];
+                        if ([info.code isEqualToString:@"200"]) {
+                            [weakSelf.sendTimer setFireDate:[NSDate distantFuture]];
+                            weakSelf.sendTime = 60;
+                            weakSelf.signUpSendButton.userInteractionEnabled = YES;
+                            [weakSelf.signUpSendButton setTitle:NSLocalizedString(@"RVC_Send", NIL) forState:UIControlStateNormal];
+                            [weakSelf login];
+                        }else{
+                            [weakSelf alert:info.message];
+                        }
+                    }];
+                
+            }else{
+                [self alert:NSLocalizedString(@"RPVC_AlertPasswordError", nil)];
+            }
+        }
+    }else{
+        [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"LVC_AlertInputEmpty", nil)];
+        [SVProgressHUD dismissWithDelay:kDismissWithDelayTime];
+    }
+}
+
+-(void)login{
+    WS(weakSelf);
+    NSDictionary *dict = @{
+                            @"areaCode":weakSelf.countryCode,
+                            @"phoneNumber":weakSelf.phoneNumTextField.text,
+                            @"password":weakSelf.signUpPasswordField.text,
+                            @"project":@"sleep",
+                            @"type": @"2",
+                            @"email":weakSelf.signUpEmailField.text};
+    [self.networkManager postLoginForData:dict WithResponse:^(ResponseInfo *info) {
+        if ([info.code isEqualToString:@"200"]) {
+            //创建用户
+            [MSCoreManager sharedManager].userModel = [UserModel mj_objectWithKeyValues:info.data[@"userInfo"]];
+            [MSCoreManager sharedManager].userModel.token = info.data[@"token"];
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:@"1" forKey:@"isLogin"];
+            [defaults setObject:weakSelf.networkManager.userModel.deviceCode forKey:@"lastConnectDevice"];
+            [defaults setObject:@{@"countryCode":dict[@"areaCode"],
+                                  @"account": dict[@"email"],
+                                  @"password_phone":@"",
+                                  @"password_mail":dict[@"password"]
+                                  } forKey:@"LoginMessage"];
+            [defaults synchronize];
+            //添加请求头
+            [weakSelf.networkManager.httpManager setRequestHeader:@{@"token":info.data[@"token"]}];
+            //存储账号密码
+            NSString *serviceName= @"com.keychainSleepBandLoginAccount.data";
+            NSString *account = dict[@"email"];
+            NSString *password = dict[@"password"];
+            if ([SAMKeychain setPassword:password forService:serviceName account:account]) {
+                NSLog(@"存储账号密码成功");
+            }
+            SearchDeviceViewController *search = [[SearchDeviceViewController alloc]initWithNibName:@"SearchDeviceViewController" bundle: [NSBundle mainBundle]];
+            search.isPushWithLogin = YES;
+            [weakSelf.navigationController pushViewController:search animated:YES];
+        }else{
+            [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
 }
 #pragma mark - 手势监听 (测试/正式，服务器域名切换)
 -(void)tapIconImg:(UITapGestureRecognizer *)sender{
@@ -364,19 +576,19 @@
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     WS(weakSelf);
-    if (textField == self.phoneNumCountryField) {
-        [self exitEdit];
-        [self selectCountry];
-        return NO;
-    }else{
-        __block CGRect rect = self.view.frame;
-        if (rect.origin.y == 0) {
-            [UIView animateWithDuration: 0.3 animations: ^{
-                rect.origin.y -= 100;
-                weakSelf.view.frame = rect;
-            } completion: nil];
-        }
-    }
+//    if (textField == self.phoneNumCountryField) {
+//        [self exitEdit];
+//        [self selectCountry];
+//        return NO;
+//    }else{
+//        __block CGRect rect = self.view.frame;
+//        if (rect.origin.y == 0) {
+//            [UIView animateWithDuration: 0.3 animations: ^{
+//                rect.origin.y -= 100;
+//                weakSelf.view.frame = rect;
+//            } completion: nil];
+//        }
+//    }
     return YES;
 }
 //-(void)refreshUI{
@@ -462,6 +674,11 @@
 #pragma mark - 设置界面
 -(void)setUI{
     WS(weakSelf);
+    
+    [self.loginButton setTitle:NSLocalizedString(@"LVC_Title", nil) forState:UIControlStateNormal];
+    [self.loginButton addTarget:self action:@selector(checkRegistrationInformation) forControlEvents:UIControlEventTouchUpInside];
+
+    return;
     
     UIImageView *rightImageView = [[UIImageView alloc]init];
     rightImageView.image = [UIImage imageNamed:@"signup_bgz"];

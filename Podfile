@@ -10,6 +10,7 @@ target 'SleepBand' do
   pod 'MJExtension'
   pod 'MJRefresh'
   pod 'Charts'
+  pod 'IQKeyboardManager'
   use_frameworks!
   pod 'iOSDFULibrary'
   use_frameworks!

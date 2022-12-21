@@ -7,7 +7,7 @@
 //
 
 #import "SearchDeviceViewController.h"
-#import "UniversalTableViewCell.h"
+#import "DeviceCell.h"
 #import "AppDelegate.h"
 #import "PeripheralModel.h"
 
@@ -16,7 +16,7 @@
 
 @property (nonatomic,strong) BlueToothManager *manager;
 @property (nonatomic,strong) NSMutableArray *deviceArray;
-@property (nonatomic,strong) UITableView *deviceTableView;
+@property (nonatomic,strong) IBOutlet UITableView *deviceTableView;
 @property (nonatomic,assign) BOOL isSelect;
 @property (copy,nonatomic)NSString *macAddress;
 @property (strong,nonatomic)NSTimer *sendTimer;
@@ -127,6 +127,15 @@
     }
     
 }
+
+- (IBAction)btnCancelClicked:(id)sender {
+    [self backClick];
+}
+
+- (IBAction)btnRefreshClicked:(id)sender {
+    [self refresh];
+}
+
 -(void)backClick{
     //关闭蓝牙搜索
     //    if(self.isPushWithLogin){
@@ -281,13 +290,13 @@
     return self.deviceArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UniversalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    DeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.lineView.hidden = NO;
-    [cell setType:CellType_Arrows];
+//    cell.lineView.hidden = NO;
+//    [cell setType:CellType_Arrows];
     PeripheralModel *model = self.deviceArray[indexPath.row];
     CBPeripheral *peripheral = model.peripheral;
-    cell.titleLabel.text = peripheral.name;
+    cell.deviceLabel.text = peripheral.name;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -337,7 +346,15 @@
 }
 -(void)setUI{
     WS(weakSelf);
-    
+    self.deviceTableView.backgroundColor = [UIColor clearColor];
+    self.deviceTableView.showsVerticalScrollIndicator = NO;
+    self.deviceTableView.delegate = self;
+    self.deviceTableView.dataSource = self;
+    [self.deviceTableView registerNib:[UINib nibWithNibName:@"DeviceCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"DeviceCell"];
+    self.deviceTableView.estimatedRowHeight = 50;
+    self.deviceTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.deviceTableView.tableFooterView = [[UIView alloc] initWithFrame: CGRectZero];
+    return;
     self.view.backgroundColor = [UIColor whiteColor];
     
     
@@ -425,14 +442,6 @@
     
     self.deviceTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview: self.deviceTableView];
-    self.deviceTableView.backgroundColor = [UIColor clearColor];
-    self.deviceTableView.showsVerticalScrollIndicator = NO;
-    self.deviceTableView.delegate = self;
-    self.deviceTableView.dataSource = self;
-    [self.deviceTableView registerClass:[UniversalTableViewCell class] forCellReuseIdentifier:@"cell"];
-    self.deviceTableView.estimatedRowHeight = 50;
-    self.deviceTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.deviceTableView.tableFooterView = [[UIView alloc] initWithFrame: CGRectZero];
     [self.deviceTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.view.mas_top).offset(kStatusBarHeight + 44 +256);
         make.left.mas_equalTo(weakSelf.view.mas_left).offset(33);

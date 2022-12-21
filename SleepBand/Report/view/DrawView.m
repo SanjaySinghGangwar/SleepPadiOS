@@ -362,6 +362,7 @@
         minutePX = XDrawWidth / (endPointTotalMinute + firstDayMinute);
         
     }
+
 //    NSLog(@"%@,%@,%d,%d,%d,%d,%f",startDate,endDate,startTotalMinute,endTotalMinute,startPointTotalMinute,endPointTotalMinute,minutePX);
 
 //    //X轴刻度

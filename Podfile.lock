@@ -22,6 +22,7 @@ PODS:
   - FMDB/standard (2.7.5)
   - iOSDFULibrary (4.13.0):
     - ZIPFoundation (= 0.9.11)
+  - IQKeyboardManager (6.5.10)
   - LKDBHelper (2.5.1):
     - LKDBHelper/standard (= 2.5.1)
   - LKDBHelper/standard (2.5.1):
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - AFNetworking
   - Charts
   - iOSDFULibrary
+  - IQKeyboardManager
   - LKDBHelper
   - Masonry
   - MJExtension
@@ -50,6 +52,7 @@ SPEC REPOS:
     - Charts
     - FMDB
     - iOSDFULibrary
+    - IQKeyboardManager
     - LKDBHelper
     - Masonry
     - MJExtension
@@ -63,6 +66,7 @@ SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   iOSDFULibrary: 3b9de67ed4bfb901b5f09c2fea843f65e152612d
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
   LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: fffa6bcc0bc198a2d6e37c013eab5ffccecd28d7
+PODFILE CHECKSUM: 9472f16e71da55f7c548107162f391a1bf124bf1
 
 COCOAPODS: 1.11.3

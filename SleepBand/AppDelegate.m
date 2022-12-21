@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "WelcomePageViewController.h"
 #import <UserNotifications/UserNotifications.h>
-
+#import <IQKeyboardManager/IQKeyboardManager.h>
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 @end
 
@@ -51,7 +51,7 @@
     if (@available(iOS 13.0, *)) {
         self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
     }
-    self.window.rootViewController = [[WelcomePageViewController alloc]init];
+    self.window.rootViewController = [[WelcomePageViewController alloc]initWithNibName:@"WelcomePageViewController" bundle:[NSBundle mainBundle]];
     [self.window makeKeyAndVisible];
     
     
@@ -64,6 +64,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
+    [[IQKeyboardManager sharedManager] setEnable: YES];
     return YES;
 }
 
@@ -164,13 +165,13 @@
 {
     if (self.mainNavigation == nil)
     {
-        self.mainNavigation = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc]init]];
+        self.mainNavigation = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle: [NSBundle mainBundle]]];
         
     }else
     {
         NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.mainNavigation.viewControllers];
         [controllers removeAllObjects];
-        controllers[0] = [[LoginViewController alloc] init];
+        controllers[0] = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle: [NSBundle mainBundle]];
 //        self.mainNavigation.viewControllers = controllers;
         [self.mainNavigation setViewControllers:controllers];
         
@@ -185,14 +186,14 @@
 {
     if (self.mainNavigation == nil)
     {
-       self.mainNavigation = [[UINavigationController alloc]initWithRootViewController:[[SearchDeviceViewController alloc]init]];
+       self.mainNavigation = [[UINavigationController alloc]initWithRootViewController:[[SearchDeviceViewController alloc]initWithNibName:@"SearchDeviceViewController" bundle: [NSBundle mainBundle]]];
         
     }else
     {
         NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.mainNavigation.viewControllers];
         [controllers removeAllObjects];
         
-        controllers[0] = [[SearchDeviceViewController alloc] init];
+        controllers[0] = [[SearchDeviceViewController alloc]initWithNibName:@"SearchDeviceViewController" bundle: [NSBundle mainBundle]];
 //        self.mainNavigation.viewControllers = controllers;
         [self.mainNavigation setViewControllers:controllers];
         

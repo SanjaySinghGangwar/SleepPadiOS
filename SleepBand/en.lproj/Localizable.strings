@@ -56,7 +56,7 @@
 "DSVC_AlertTitle" = "The current application has logged in to the account,whether to confirm the exit.";
 "DSVC_AlertNoSelect" = "Please select the device.";
 //登录界面
-"LVC_Title" = "Login";
+"LVC_Title" = "Sign In";
 "LVC_PhoneLogin" = "Phone Number";
 "LVC_EmailLogin" = "Email Adress";
 "LVC_PhoneCountryPlaceholder" = "Country";
@@ -84,7 +84,7 @@
 "RVC_SetPassword" = "Setting Password";
 "RVC_ConfirmPassword" = "Confirm Password";
 "RVC_SignIn" = "Sign IN";
-"RVC_Send" = "Send Code";
+"RVC_Send" = "Send";
 "RVC_CodePlaceholder" = "Verification Code";
 "RVC_AlertRegisterSuccess" = "Registration is successful, please remember your account and password.";
 "RVC_AlertUserExists" = "User already exists.";

@@ -68,16 +68,16 @@
     
 //    UIColor *bgColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"launch"]];
 //    self.view.backgroundColor = bgColor;
-    self.view.backgroundColor = [UIColor whiteColor];
-    UIImageView *launchIV = [[UIImageView alloc]init];
-    launchIV.contentMode = UIViewContentModeScaleAspectFill;
-    launchIV.image  = [UIImage imageNamed:@"startPhoto"];
-    [self.view addSubview:launchIV];
-    [launchIV mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.left.right.bottom.equalTo(weakSelf.view);
-        
-    }];
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    UIImageView *launchIV = [[UIImageView alloc]init];
+//    launchIV.contentMode = UIViewContentModeScaleAspectFill;
+//    launchIV.image  = [UIImage imageNamed:@"startPhoto"];
+//    [self.view addSubview:launchIV];
+//    [launchIV mas_makeConstraints:^(MASConstraintMaker *make) {
+//
+//        make.top.left.right.bottom.equalTo(weakSelf.view);
+//
+//    }];
     
     AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0/*延迟执行时间*/ * NSEC_PER_SEC));
