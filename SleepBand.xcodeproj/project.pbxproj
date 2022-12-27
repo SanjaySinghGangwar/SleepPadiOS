@@ -15,6 +15,9 @@
 		04225084295B08B2004AC1A8 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225081295B08B1004AC1A8 /* MBCircularProgressBarView.m */; };
 		04225085295B08B2004AC1A8 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225082295B08B2004AC1A8 /* MBCircularProgressBarLayer.m */; };
 		04225089295B1B84004AC1A8 /* JournalCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225088295B1B84004AC1A8 /* JournalCellView.m */; };
+		04225091295B40E3004AC1A8 /* XYWReportBaseChartViewNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422508C295B40E3004AC1A8 /* XYWReportBaseChartViewNew.m */; };
+		04225092295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422508E295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.m */; };
+		04225093295B40E3004AC1A8 /* XYWProgressCellViewNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225090295B40E3004AC1A8 /* XYWProgressCellViewNew.m */; };
 		4AC958CE1F91B7CAD555C252 /* Pods_SleepBand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEAAA439B351AED0BBB4DA7 /* Pods_SleepBand.framework */; };
 		697DF52C291982A800197360 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697DF52B291982A800197360 /* LoginViewController.xib */; };
 		6989B72F291A2D61008FA36C /* WelcomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989B72E291A2D61008FA36C /* WelcomePageViewController.xib */; };
@@ -350,6 +353,12 @@
 		04225083295B08B2004AC1A8 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		04225087295B1B84004AC1A8 /* JournalCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JournalCellView.h; sourceTree = "<group>"; };
 		04225088295B1B84004AC1A8 /* JournalCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JournalCellView.m; sourceTree = "<group>"; };
+		0422508B295B40E2004AC1A8 /* XYWReportBaseChartViewNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWReportBaseChartViewNew.h; sourceTree = "<group>"; };
+		0422508C295B40E3004AC1A8 /* XYWReportBaseChartViewNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWReportBaseChartViewNew.m; sourceTree = "<group>"; };
+		0422508D295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWReportRangeDataSelectViewNew.h; sourceTree = "<group>"; };
+		0422508E295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWReportRangeDataSelectViewNew.m; sourceTree = "<group>"; };
+		0422508F295B40E3004AC1A8 /* XYWProgressCellViewNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWProgressCellViewNew.h; sourceTree = "<group>"; };
+		04225090295B40E3004AC1A8 /* XYWProgressCellViewNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWProgressCellViewNew.m; sourceTree = "<group>"; };
 		301622C8285F08C5A017EEFF /* Pods-SleepBand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.release.xcconfig"; sourceTree = "<group>"; };
 		3A2895D89F3641C8C5875F48 /* Pods-SleepBand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.debug.xcconfig"; sourceTree = "<group>"; };
 		697DF52B291982A800197360 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -855,6 +864,7 @@
 		04225076295AE9AE004AC1A8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0422508A295B40B0004AC1A8 /* CustomView */,
 				04225077295AE9C1004AC1A8 /* DashboardVC.h */,
 				04225078295AE9C1004AC1A8 /* DashboardVC.m */,
 			);
@@ -894,6 +904,19 @@
 			children = (
 				04225087295B1B84004AC1A8 /* JournalCellView.h */,
 				04225088295B1B84004AC1A8 /* JournalCellView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		0422508A295B40B0004AC1A8 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				0422508F295B40E3004AC1A8 /* XYWProgressCellViewNew.h */,
+				04225090295B40E3004AC1A8 /* XYWProgressCellViewNew.m */,
+				0422508B295B40E2004AC1A8 /* XYWReportBaseChartViewNew.h */,
+				0422508C295B40E3004AC1A8 /* XYWReportBaseChartViewNew.m */,
+				0422508D295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.h */,
+				0422508E295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -2007,6 +2030,7 @@
 				0422507D295AE9D6004AC1A8 /* SettingsVC.m in Sources */,
 				844051F4213CC5F00037FD3F /* SleepCurve.mm in Sources */,
 				84570DFB2105D2A2009D4214 /* FDCalendarItem.m in Sources */,
+				04225093295B40E3004AC1A8 /* XYWProgressCellViewNew.m in Sources */,
 				8477CBE422A52C5D0039BFF3 /* AAOptions.m in Sources */,
 				8477CBD322A52C5D0039BFF3 /* AAYAxis.m in Sources */,
 				8477CBE722A52C5D0039BFF3 /* AAGradientColor.m in Sources */,
@@ -2052,6 +2076,7 @@
 				849F890F213795F2002A8E52 /* AlarmClockTypeSelectViewController.m in Sources */,
 				04225084295B08B2004AC1A8 /* MBCircularProgressBarView.m in Sources */,
 				04225071295AE991004AC1A8 /* HomeVC.m in Sources */,
+				04225091295B40E3004AC1A8 /* XYWReportBaseChartViewNew.m in Sources */,
 				846D950C20EDF724009EF565 /* UIColor+ColorChange.m in Sources */,
 				846D951620EDF724009EF565 /* NSData+Addittion.m in Sources */,
 				84570F0D21080DE6009D4214 /* UIFactory.m in Sources */,
@@ -2088,6 +2113,7 @@
 				8477CBE522A52C5D0039BFF3 /* AASeriesElement.m in Sources */,
 				8477CBDD22A52C5D0039BFF3 /* AALegend.m in Sources */,
 				84672AF920F8963A00E688B9 /* PersonalInformationViewController.m in Sources */,
+				04225092295B40E3004AC1A8 /* XYWReportRangeDataSelectViewNew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

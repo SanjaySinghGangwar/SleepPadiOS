@@ -112,18 +112,18 @@
     valueLabel.font = [UIFont boldSystemFontOfSize:24.0];
     self.valueLabel = valueLabel;
     
-    NSArray * titleYArr = @[NSLocalizedString(@"RMVC_Sober", nil),
-                                   NSLocalizedString(@"RMVC_LightSleep", nil),
-                                   NSLocalizedString(@"RMVC_MiddleSleep", nil),
-                                   NSLocalizedString(@"RMVC_DeepSleep", nil)];
+    NSArray * titleYArr = @[@"A",
+                                   @"L",
+                                   @"M",
+                                   @"D"];
     NSMutableArray * yLabViews = [NSMutableArray array];
     for (int i = 0; i<4; i++) {
         UILabel * lab = [[UILabel alloc]init];
         [self addSubview:lab];
         lab.tag = i;
-        lab.backgroundColor = [UIColor whiteColor];
+        lab.backgroundColor = [UIColor clearColor];
         lab.font = [UIFont systemFontOfSize:14 weight:UIFontWeightLight];
-        lab.textColor = [UIColor colorWithHexString:@"#b1aca8"];
+        lab.textColor = [UIColor whiteColor];
         lab.textAlignment = NSTextAlignmentRight;
         lab.text = titleYArr[i];
         [yLabViews addObject:lab];
@@ -136,7 +136,7 @@
         [self addSubview:lab];
         lab.tag = i + 10;
         lab.font = [UIFont systemFontOfSize:12];
-        lab.textColor = [UIColor grayColor];
+        lab.textColor = [UIColor whiteColor];
         lab.textAlignment = NSTextAlignmentCenter;
         lab.text = @"00:00";
         [xLabViews addObject:lab];

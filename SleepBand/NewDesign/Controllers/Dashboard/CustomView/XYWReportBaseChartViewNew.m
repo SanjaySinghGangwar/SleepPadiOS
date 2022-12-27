@@ -6,10 +6,10 @@
 //  Copyright © 2019 admin. All rights reserved.
 //
 
-#import "XYWReportBaseChartView.h"
+#import "XYWReportBaseChartViewNew.h"
 #import "AAChartKit.h"
 
-@interface XYWReportBaseChartView ()<AAChartViewEventDelegate>
+@interface XYWReportBaseChartViewNew ()<AAChartViewEventDelegate>
 
 @property (nonatomic, strong) AAChartModel * myChartModel;
 @property (nonatomic, strong) AAChartView * myChartView;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation XYWReportBaseChartView
+@implementation XYWReportBaseChartViewNew
 
 #pragma mark -- init
 - (instancetype)initWithIconStr:(NSString*)iconStr
@@ -38,7 +38,6 @@
                       titleYArr:(NSArray*)titleYArr{
     
     if (self = [super init]) {
-        // 设置属性值
         self.backgroundColor = [UIColor clearColor];
         self.iconStr = iconStr;
         self.title = title;
@@ -46,30 +45,15 @@
         self.valueStr = valueStr;
         self.themeColor = themeColor;
         self.gridYLineColor = gridYLineColor;
-//        self.titleXArr = @[@"00:00", @"05:12", @"10:24", @"15:36", @"02:00"];
-//        self.titleYArr = titleYArr;
-        // 创建临时变量
+
+        
         //...
-        //波形-的背景image
         UIImageView * backgroundImgView = [[UIImageView alloc]init];
         [self addSubview:backgroundImgView];
-        //backgroundImgView.image = [UIImage imageNamed:backgroundImageStr];
+        backgroundImgView.image = [UIImage imageNamed:backgroundImageStr];
         self.backgroundImgView = backgroundImgView;
         
-//        //iconView
-//        UIImageView * iconImgView = [[UIImageView alloc]init];
-//        [self addSubview:iconImgView];
-//        iconImgView.image = [UIImage imageNamed:iconStr];
-//        self.iconImgView = iconImgView;
-//        //标题
-//        UILabel *titleLab = [[UILabel alloc]init];
-//        [self addSubview:titleLab];
-//        titleLab.font = [UIFont systemFontOfSize:15];
-//        titleLab.textColor = [UIColor colorWithHexString:@"#1b86a4"];
-//        titleLab.textAlignment = NSTextAlignmentCenter;
-//        titleLab.text = title;
-//        self.titleLab = titleLab;
-        //标题按钮
+
         UIButton * titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [self addSubview:titleBtn];
         [titleBtn setImage:[UIImage imageNamed:iconStr] forState:UIControlStateNormal];
