@@ -14,6 +14,7 @@
 @end
 
 @implementation AppDelegate
+@synthesize tabBarVC;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -172,12 +173,12 @@
         NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.mainNavigation.viewControllers];
         [controllers removeAllObjects];
         controllers[0] = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle: [NSBundle mainBundle]];
-//        self.mainNavigation.viewControllers = controllers;
+        //self.mainNavigation.viewControllers = controllers;
         [self.mainNavigation setViewControllers:controllers];
         
     }
     self.window.rootViewController = self.mainNavigation;
-//    self.mainTabBar = nil;
+    //self.mainTabBar = nil;
     
 }
 
@@ -306,6 +307,18 @@
     self.window.rootViewController = self.mainNavigation;
     //    self.mainTabBar = nil;
     
+}
+
+-(void)setRootViewControllerForNewTabbar {
+    if (self.mainNavigation == nil) {
+        self.mainNavigation = [[UINavigationController alloc]initWithRootViewController: [[TabBarVC alloc] init] ];
+    } else {
+        NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.mainNavigation.viewControllers];
+        [controllers removeAllObjects];
+        controllers[0] = [[TabBarVC alloc] init];
+        [self.mainNavigation setViewControllers:controllers];
+    }
+    self.window.rootViewController = self.mainNavigation;
 }
 
 

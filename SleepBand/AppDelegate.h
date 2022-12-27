@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarVC.h"
 #import "TabBarViewController.h"
 #import "SearchDeviceViewController.h"
 /**
@@ -17,6 +18,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic,strong)TabBarVC *tabBarVC;
 @property (nonatomic,strong)TabBarViewController *mainTabBar;
 @property (nonatomic,strong)UINavigationController *mainNavigation;
 
@@ -37,6 +39,9 @@
 
 //报告界面
 //-(void)setRootViewControllerForReportMain;
+
+
+-(void)setRootViewControllerForNewTabbar;
 
 @end
 

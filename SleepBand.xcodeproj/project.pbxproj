@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0422506B295AE84B004AC1A8 /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422506A295AE84B004AC1A8 /* TabBarVC.m */; };
+		04225071295AE991004AC1A8 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225070295AE991004AC1A8 /* HomeVC.m */; };
+		04225075295AE9A9004AC1A8 /* JournalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225074295AE9A9004AC1A8 /* JournalVC.m */; };
+		04225079295AE9C1004AC1A8 /* DashboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225078295AE9C1004AC1A8 /* DashboardVC.m */; };
+		0422507D295AE9D6004AC1A8 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422507C295AE9D6004AC1A8 /* SettingsVC.m */; };
+		04225084295B08B2004AC1A8 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225081295B08B1004AC1A8 /* MBCircularProgressBarView.m */; };
+		04225085295B08B2004AC1A8 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225082295B08B2004AC1A8 /* MBCircularProgressBarLayer.m */; };
+		04225089295B1B84004AC1A8 /* JournalCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04225088295B1B84004AC1A8 /* JournalCellView.m */; };
 		4AC958CE1F91B7CAD555C252 /* Pods_SleepBand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEAAA439B351AED0BBB4DA7 /* Pods_SleepBand.framework */; };
 		697DF52C291982A800197360 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697DF52B291982A800197360 /* LoginViewController.xib */; };
 		6989B72F291A2D61008FA36C /* WelcomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989B72E291A2D61008FA36C /* WelcomePageViewController.xib */; };
@@ -326,6 +334,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04225069295AE84B004AC1A8 /* TabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarVC.h; sourceTree = "<group>"; };
+		0422506A295AE84B004AC1A8 /* TabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarVC.m; sourceTree = "<group>"; };
+		0422506F295AE991004AC1A8 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		04225070295AE991004AC1A8 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		04225073295AE9A9004AC1A8 /* JournalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JournalVC.h; sourceTree = "<group>"; };
+		04225074295AE9A9004AC1A8 /* JournalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JournalVC.m; sourceTree = "<group>"; };
+		04225077295AE9C1004AC1A8 /* DashboardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardVC.h; sourceTree = "<group>"; };
+		04225078295AE9C1004AC1A8 /* DashboardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardVC.m; sourceTree = "<group>"; };
+		0422507B295AE9D6004AC1A8 /* SettingsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		0422507C295AE9D6004AC1A8 /* SettingsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		04225080295B08B1004AC1A8 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		04225081295B08B1004AC1A8 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarView.m; sourceTree = "<group>"; };
+		04225082295B08B2004AC1A8 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
+		04225083295B08B2004AC1A8 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
+		04225087295B1B84004AC1A8 /* JournalCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JournalCellView.h; sourceTree = "<group>"; };
+		04225088295B1B84004AC1A8 /* JournalCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JournalCellView.m; sourceTree = "<group>"; };
 		301622C8285F08C5A017EEFF /* Pods-SleepBand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.release.xcconfig"; sourceTree = "<group>"; };
 		3A2895D89F3641C8C5875F48 /* Pods-SleepBand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepBand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepBand/Pods-SleepBand.debug.xcconfig"; sourceTree = "<group>"; };
 		697DF52B291982A800197360 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -779,6 +803,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04225068295AE81D004AC1A8 /* NewDesign */ = {
+			isa = PBXGroup;
+			children = (
+				0422507E295B0890004AC1A8 /* Tool */,
+				0422506D295AE958004AC1A8 /* Controllers */,
+			);
+			path = NewDesign;
+			sourceTree = "<group>";
+		};
+		0422506C295AE94C004AC1A8 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				04225069295AE84B004AC1A8 /* TabBarVC.h */,
+				0422506A295AE84B004AC1A8 /* TabBarVC.m */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		0422506D295AE958004AC1A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0422507A295AE9C7004AC1A8 /* Settings */,
+				04225076295AE9AE004AC1A8 /* Dashboard */,
+				04225072295AE997004AC1A8 /* Journal */,
+				0422506E295AE970004AC1A8 /* Home */,
+				0422506C295AE94C004AC1A8 /* TabbarController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0422506E295AE970004AC1A8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0422506F295AE991004AC1A8 /* HomeVC.h */,
+				04225070295AE991004AC1A8 /* HomeVC.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04225072295AE997004AC1A8 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				04225086295B1B04004AC1A8 /* CustomView */,
+				04225073295AE9A9004AC1A8 /* JournalVC.h */,
+				04225074295AE9A9004AC1A8 /* JournalVC.m */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		04225076295AE9AE004AC1A8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				04225077295AE9C1004AC1A8 /* DashboardVC.h */,
+				04225078295AE9C1004AC1A8 /* DashboardVC.m */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		0422507A295AE9C7004AC1A8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0422507B295AE9D6004AC1A8 /* SettingsVC.h */,
+				0422507C295AE9D6004AC1A8 /* SettingsVC.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0422507E295B0890004AC1A8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				0422507F295B0899004AC1A8 /* MBCircularProgressBar */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		0422507F295B0899004AC1A8 /* MBCircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				04225083295B08B2004AC1A8 /* MBCircularProgressBarLayer.h */,
+				04225082295B08B2004AC1A8 /* MBCircularProgressBarLayer.m */,
+				04225080295B08B1004AC1A8 /* MBCircularProgressBarView.h */,
+				04225081295B08B1004AC1A8 /* MBCircularProgressBarView.m */,
+			);
+			path = MBCircularProgressBar;
+			sourceTree = "<group>";
+		};
+		04225086295B1B04004AC1A8 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				04225087295B1B84004AC1A8 /* JournalCellView.h */,
+				04225088295B1B84004AC1A8 /* JournalCellView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		8404BA7C21C0B00C00D711EC /* dbdata */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +986,7 @@
 		846D94B420EDF564009EF565 /* SleepBand */ = {
 			isa = PBXGroup;
 			children = (
+				04225068295AE81D004AC1A8 /* NewDesign */,
 				8477CB8722A52C5D0039BFF3 /* AAChartKitLib */,
 				846D94B520EDF564009EF565 /* AppDelegate.h */,
 				846D94B620EDF564009EF565 /* AppDelegate.m */,
@@ -1859,6 +1979,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8477CBCA22A52C5D0039BFF3 /* AAAreaspline.m in Sources */,
+				04225079295AE9C1004AC1A8 /* DashboardVC.m in Sources */,
 				846B3537211C18760025CEC1 /* TurnOverModel.m in Sources */,
 				8477CBCB22A52C5D0039BFF3 /* AALabels.m in Sources */,
 				6999EFFB291ECD20000ECBCF /* DeviceCell.m in Sources */,
@@ -1883,6 +2004,7 @@
 				84672AAD20F5A5EA00E688B9 /* AlarmClockModel.m in Sources */,
 				846D951420EDF724009EF565 /* BCCKeychain.m in Sources */,
 				8477CBD422A52C5D0039BFF3 /* AACrosshair.m in Sources */,
+				0422507D295AE9D6004AC1A8 /* SettingsVC.m in Sources */,
 				844051F4213CC5F00037FD3F /* SleepCurve.mm in Sources */,
 				84570DFB2105D2A2009D4214 /* FDCalendarItem.m in Sources */,
 				8477CBE422A52C5D0039BFF3 /* AAOptions.m in Sources */,
@@ -1909,11 +2031,13 @@
 				8477CBDF22A52C5D0039BFF3 /* AASpline.m in Sources */,
 				8404BA9921C0E48900D711EC /* SleepAdviceViewController.m in Sources */,
 				8477CBE222A52C5D0039BFF3 /* AAChartView.m in Sources */,
+				0422506B295AE84B004AC1A8 /* TabBarVC.m in Sources */,
 				8477CBCE22A52C5D0039BFF3 /* AAPlotOptions.m in Sources */,
 				84570DFC2105D2A2009D4214 /* FDCalendar.m in Sources */,
 				8477CBCC22A52C5D0039BFF3 /* AASeries.m in Sources */,
 				84672AEA20F83B9800E688B9 /* UniversalTableViewCell.m in Sources */,
 				84ABAE92210EB8FC009481AA /* ZJHTTPManager.m in Sources */,
+				04225085295B08B2004AC1A8 /* MBCircularProgressBarLayer.m in Sources */,
 				846D953A20EDFB9C009EF565 /* RegisterViewController.m in Sources */,
 				8491D98921A94339007E1C88 /* PeripheralModel.m in Sources */,
 				84672AF620F88C0E00E688B9 /* BoundViewController.m in Sources */,
@@ -1926,6 +2050,8 @@
 				84ABAEA62112FB3D009481AA /* CustomEditTableViewCell.m in Sources */,
 				8477CBED22A6036A0039BFF3 /* XYWDayBackView.m in Sources */,
 				849F890F213795F2002A8E52 /* AlarmClockTypeSelectViewController.m in Sources */,
+				04225084295B08B2004AC1A8 /* MBCircularProgressBarView.m in Sources */,
+				04225071295AE991004AC1A8 /* HomeVC.m in Sources */,
 				846D950C20EDF724009EF565 /* UIColor+ColorChange.m in Sources */,
 				846D951620EDF724009EF565 /* NSData+Addittion.m in Sources */,
 				84570F0D21080DE6009D4214 /* UIFactory.m in Sources */,
@@ -1944,10 +2070,12 @@
 				8477CBD022A52C5D0039BFF3 /* AAPlotBandsElement.m in Sources */,
 				8477CBE022A52C5D0039BFF3 /* AAPie.m in Sources */,
 				846D954A20EDFD81009EF565 /* PersonalMainViewController.m in Sources */,
+				04225089295B1B84004AC1A8 /* JournalCellView.m in Sources */,
 				84672AFC20F8A09E00E688B9 /* MyDeviceViewController.m in Sources */,
 				846B353A211C18B80025CEC1 /* HeartRateModel.m in Sources */,
 				84B1735B22CDC89000CD4DC2 /* AlarmClockTool.m in Sources */,
 				8440524B2147B5BA0037FD3F /* ManualSleepReportViewController.m in Sources */,
+				04225075295AE9A9004AC1A8 /* JournalVC.m in Sources */,
 				8477CBD122A52C5D0039BFF3 /* AALine.m in Sources */,
 				84164F762212A60800698220 /* MainViewController.m in Sources */,
 				84672BF920FDE73700E688B9 /* AlarmClockMusicViewController.m in Sources */,

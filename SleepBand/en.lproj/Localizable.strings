@@ -360,3 +360,16 @@
 "提醒" = "remind";
 "注销账号" = "Logout";
 "是否确认注销您的账号,确认后账号将会在三天内注销成功,注销成功后账号数据将被完全删除,不可恢复!请谨慎操作." = "Whether to confirm the cancellation of your account, the account will be successfully cancelled within three days after confirmation, and the account data will be completely deleted after the successful cancellation, which cannot be recovered! Please operate with caution.";
+
+
+//For New Design
+
+"HTVC_Title" = "Home";
+"JTVC_Title" = "Journal";
+"DTVC_Title" = "Dashboard";
+"STVC_Title" = "Settings";
+
+"JVC_InBed" = "in Bed >";
+"JVC_Awake" = "Awake >";
+"JVC_HeartRate" = "Heart Rate >";
+"JVC_RespirationRate" = "Respiration Rate >";

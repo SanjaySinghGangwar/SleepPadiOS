@@ -102,6 +102,15 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 #import "AAGlobalMacro.h"
 
+
+//For New Design
+#import "HomeVC.h"
+#import "JournalVC.h"
+#import "DashboardVC.h"
+#import "SettingsVC.h"
+#import "JournalCellView.h"
+
+
 //#import "SleepBand-Bridging-Header.h"
 //#import "Charts-Swift.h"
 
