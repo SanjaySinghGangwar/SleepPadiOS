@@ -75,8 +75,8 @@
                             NSLocalizedString(@"JVC_Awake", nil),
                             NSLocalizedString(@"JVC_HeartRate", nil),
                             NSLocalizedString(@"JVC_RespirationRate", nil)];
-    NSArray *iconArray  =  @[@"report_icon_deep",@"report_icon_wakeup",
-                             @"report_icon_heartrate",@"report_icon_breath"];
+    NSArray *iconArray  =  @[@"ic_InBed",@"icAwake",
+                             @"icHeartBeat",@"icLungs"];
     
     NSMutableArray * progressCellViewsArr = [NSMutableArray array];
     

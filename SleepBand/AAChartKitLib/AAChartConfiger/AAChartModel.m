@@ -129,10 +129,10 @@ AALineDashStyleType const AALineDashStyleTypeLongDashDotDot  = @"LongDashDotDot"
         _dataLabelFontWeight   = AAChartFontWeightTypeBold;//图表的数据字体为粗体
         _dataLabelFontSize     = @10;
         _xAxisLabelsFontSize   = @11;//x轴字体大小
-        _xAxisLabelsFontColor  = @"#778899";//浅石板灰色字体
+        _xAxisLabelsFontColor  = @"#FFFFFF";//浅石板灰色字体
         _xAxisLabelsFontWeight = AAChartFontWeightTypeThin;//细体字
         _yAxisLabelsFontSize   = @11;
-        _yAxisLabelsFontColor  = @"#778899";//浅石板灰色字体
+        _yAxisLabelsFontColor  = @"#FFFFFF";//浅石板灰色字体
 //        _gridYLineColor        = @"#778899";//y轴 分割线颜色
         _yAxisLabelsFontWeight = AAChartFontWeightTypeThin;//细体字
     }

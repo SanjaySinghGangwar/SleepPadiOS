@@ -37,6 +37,7 @@
         
         UIImageView *iconView = [[UIImageView alloc]init];
         iconView.contentMode = UIViewContentModeScaleAspectFit;
+        [iconView setTintColor:[UIColor whiteColor]];
         iconView.image = [UIImage imageNamed:self.iconStr];
         self.iconView = iconView;
         [self addSubview:iconView];
@@ -158,8 +159,8 @@
     [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@0);
         make.top.equalTo(@0);
-        make.width.equalTo(@48);
-        make.height.equalTo(@48);
+        make.width.equalTo(@36);
+        make.height.equalTo(@36);
     }];
     
     if (_index == 2 || _index == 3) {

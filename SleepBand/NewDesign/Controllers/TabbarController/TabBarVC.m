@@ -88,7 +88,7 @@
         icon.image = [UIImage imageNamed: normalImages[i]];
         [item addSubview:icon];
         [icon mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(@4);
+            make.top.equalTo(@3);
             make.centerX.equalTo(item);
             make.width.equalTo(@20);
             make.height.equalTo(@20);
@@ -112,7 +112,7 @@
         [indicator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(title.mas_bottom).offset(1);
             make.left.right.bottom.equalTo(item);
-            make.height.equalTo(@3);
+            make.height.equalTo(@4);
 
         }];
         

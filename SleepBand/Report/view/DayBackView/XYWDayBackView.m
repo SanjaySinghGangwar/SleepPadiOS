@@ -93,10 +93,11 @@
 - (void)setUIForSleepQuality{
     
     //画虚线 (清醒，浅睡，中睡，深睡)
-//    [self drawLineForChart];
+    [self drawLineForChart];
     
     //睡眠质量波形图 初始化
     [self drawChartForSQChartView2];
+    
     
     //coverView 遮罩布
 //    UIView * coverView = [[UIView alloc] init];
@@ -116,6 +117,9 @@
                                    @"L",
                                    @"M",
                                    @"D"];
+    
+    NSArray *titleXArr = @[@"00:00", @"04:48", @"09:36", @"14:24", @"00:00"];
+
     NSMutableArray * yLabViews = [NSMutableArray array];
     for (int i = 0; i<4; i++) {
         UILabel * lab = [[UILabel alloc]init];
@@ -131,17 +135,17 @@
     self.yLabViews = yLabViews;
     
     NSMutableArray * xLabViews = [NSMutableArray array];
-    for (int i = 0; i<5; i++) {
+    for (int i = 0; i<titleXArr.count; i++) {
         UILabel * lab = [[UILabel alloc]init];
         [self addSubview:lab];
         lab.tag = i + 10;
         lab.font = [UIFont systemFontOfSize:12];
         lab.textColor = [UIColor whiteColor];
         lab.textAlignment = NSTextAlignmentCenter;
-        lab.text = @"00:00";
+        lab.text = titleXArr[i];
         [xLabViews addObject:lab];
         
-        lab.textColor = [UIColor clearColor];
+        lab.textColor = [UIColor whiteColor];
         lab.backgroundColor = [UIColor clearColor];
     }
     self.xLabViews = xLabViews;
@@ -152,9 +156,9 @@
     //睡眠监测Lab
     UILabel * monitorTitleLab = [[UILabel alloc]init];
     [self addSubview:monitorTitleLab];
-    monitorTitleLab.font = [UIFont systemFontOfSize:14 weight:UIFontWeightLight];
+    monitorTitleLab.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     monitorTitleLab.textAlignment = NSTextAlignmentCenter;
-    monitorTitleLab.textColor = [UIColor colorWithHexString:@"#575756"];
+    monitorTitleLab.textColor = [UIColor whiteColor];
     monitorTitleLab.text = NSLocalizedString(@"RMVC_SleepMonitoring", nil);
     self.monitorTitleLab = monitorTitleLab;
 }
@@ -162,7 +166,7 @@
 #pragma mark --setUI 心率数据表
 - (void)setUIForHeartRate{
     
-    XYWReportBaseChartView * reportHeartRateView = [[XYWReportBaseChartView alloc]initWithIconStr:@"realtime_icon_heartrate" title:NSLocalizedString(@"RTVC_HeartRateTitle", nil) bgImgStr:@"report_br_bg" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)] themeColor:@"#1b86a4" gridYLineColor:@"#26B9DA" titleYArr:@[@"180",@"135",@"90",@"45",@"0"]];
+    XYWReportBaseChartView * reportHeartRateView = [[XYWReportBaseChartView alloc]initWithIconStr:@"icHeartBeat" title:NSLocalizedString(@"RTVC_HeartRateTitle", nil) bgImgStr:@"" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)] themeColor:@"#FFFFFF" gridYLineColor:@"#FFFFFF" titleYArr:@[@"180",@"135",@"90",@"45",@"0"]];
     [self addSubview:reportHeartRateView];
     self.reportHeartRateView = reportHeartRateView;
     
@@ -171,7 +175,7 @@
 #pragma mark --setUI 呼吸数据表
 - (void)setUIForBreathRate{
     
-    XYWReportBaseChartView * reportBreathRateView = [[XYWReportBaseChartView alloc]initWithIconStr:@"realtime_icon_breath" title:NSLocalizedString(@"RTVC_RespiratoryRateTitle", nil) bgImgStr:@"report_hr_bg" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)] themeColor:@"#c3ad8c" gridYLineColor:@"#CEAC87" titleYArr:@[@"40",@"30",@"20",@"10",@"0"]];
+    XYWReportBaseChartView * reportBreathRateView = [[XYWReportBaseChartView alloc]initWithIconStr:@"icLungs" title:NSLocalizedString(@"RTVC_RespiratoryRateTitle", nil) bgImgStr:@"" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)] themeColor:@"#FFFFFF" gridYLineColor:@"#FFFFFF" titleYArr:@[@"40",@"30",@"20",@"10",@"0"]];
     [self addSubview:reportBreathRateView];
     self.reportBreathRateView = reportBreathRateView;
     
@@ -180,7 +184,7 @@
 #pragma mark --setUI 翻身数据表
 - (void)setUIForTurnOver{
     
-    XYWReportBaseChartView * reportTurnOverView = [[XYWReportBaseChartView alloc]initWithIconStr:@"report_icon_turn" title:NSLocalizedString(@"RMVC_TurnOver", nil) bgImgStr:@"report_br_bg" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"RMVC_TurnOverHourTime", nil)] themeColor:@"#1b86a4" gridYLineColor:@"#26B9DA" titleYArr:@[@"8",@"6",@"4",@"2",@"0"]];
+    XYWReportBaseChartView * reportTurnOverView = [[XYWReportBaseChartView alloc]initWithIconStr:@"icBodyMovement" title:NSLocalizedString(@"DTVC_BodyMovement", nil) bgImgStr:@"" valueStr:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"DTVC_BodyMovement", nil)] themeColor:@"#FFFFFF" gridYLineColor:@"#FFFFFF" titleYArr:@[@"8",@"6",@"4",@"2",@"0"]];
     [self addSubview:reportTurnOverView];
     self.reportTurnOverView = reportTurnOverView;
     
@@ -257,10 +261,10 @@
     yAxis.axisMinimum = 0;
     [yAxis setLabelCount:4 force:NO];
     yAxis.labelTextColor = UIColor.clearColor;
-//    yAxis.gridColor = [UIColor grayColor]; //网线颜色
-    yAxis.drawGridLinesEnabled = NO; //是否要画网格线
+    yAxis.gridColor = [UIColor grayColor]; //网线颜色
+    yAxis.drawGridLinesEnabled = YES; //是否要画网格线
     yAxis.labelPosition = YAxisLabelPositionInsideChart;
-    yAxis.axisLineColor = UIColor.whiteColor; // Y轴颜色
+    yAxis.axisLineColor = UIColor.redColor; // Y轴颜色
 //    yAxis.valueFormatter = self;
 //    yAxis.granularity = 10;
     yAxis.drawLimitLinesBehindDataEnabled = YES;//设置限制线绘制在折线图的后面
@@ -485,7 +489,7 @@
 //刷新-全部数据（睡眠质量、心率、呼吸、翻身）
 - (void)xyw_refreshDayBackViewWithData:(NSInteger)selectData sizeTime:(NSInteger)sizeTime{
     selectData += 5*60*60;
-    [self xyw_refreshSleepQualityDataWithData:selectData sizeTime:sizeTime];
+    //[self xyw_refreshSleepQualityDataWithData:selectData sizeTime:sizeTime];
     [self xyw_refreshHeartRateDataWithData:selectData sizeTime:sizeTime];
     [self xyw_refreshBreathRateDataWithData:selectData sizeTime:sizeTime];
     [self xyw_refreshTurnOverDataWithData:selectData sizeTime:sizeTime];
@@ -678,72 +682,75 @@
     NSInteger endTime = beginTime + sizeTime;
     
     NSMutableArray * chartData = [NSMutableArray array];//存放波形图数据的数组
-    int allData = 0;//总和
-    int allDataNum = 0;//总和个数
-    NSMutableArray * dateHeartRateArray = [HeartRateModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
-    if (dateHeartRateArray.count>0) {
-        
-        HeartRateModel * model = nil;
-        for (int i = 0; i < dateHeartRateArray.count; i++) {
-            HeartRateModel * testModel = dateHeartRateArray[i];
-            //开始时间 < 时间戳 < 结束时间
-            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
-                model = testModel;
-            }
-        }
-        if (model) {
-            for (NSDictionary * dict in model.dataArray) {
-                //心率
-                NSInteger heartRateValue = [[dict objectForKey:@"value"] integerValue];
-                [chartData addObject:[NSNumber numberWithFloat:heartRateValue]];
-//                [chartData addObject:[NSNumber numberWithFloat:heartRateValue += 1]];
-                if (heartRateValue != 0) {
-                    allData += heartRateValue;
-                    allDataNum++;
-                }
-            }
-        }
-        
-        //刷新-波形图 @[@0, @36, @72, @108, @144, @180, @225]
-        [self.reportHeartRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @45, @90, @135, @180] pointArr:chartData];
-        if (model) {
-//            NSInteger spaceTime = 5 * 60 * (model.dataArray.count - 1) / 4;
-            NSMutableArray * titleXArr = [NSMutableArray array];
-            for (int i = 0; i < 5; i++) {
-                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
-                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"HH:mm"];
-                NSString *dateString = [formatter stringFromDate:date];
-                [titleXArr addObject:dateString];
-            }
-            self.reportHeartRateView.titleXArr = titleXArr;
-        }else{
-            self.reportHeartRateView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
-        }
-        
-        //刷新-波形图平均值
-        NSString * valueStr = model && model.dataArray.count > 0 ? [NSString stringWithFormat:@"%d%@",allData/allDataNum,NSLocalizedString(@"SMVC_HeartRateUnit", nil)]:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)];
-        self.reportHeartRateView.valueStr = valueStr;
-        //刷新-进度条（平均心率）
-        for (XYWProgressCellView * progressCellView in self.progressArr) {
-            if (progressCellView.index == 4) {
-                if (model && model.dataArray.count > 0) {
-                    progressCellView.time = [NSString stringWithFormat:@"%d",allData/allDataNum];
-                    progressCellView.percentage = (CGFloat)((float)allData / allDataNum / 180);
-                    
-                }else{
-                    progressCellView.time = @"0";
-                    progressCellView.percentage = 0;
-                }
-                
-            }
-        }
-        
-    }else{
-        NSLog(@"没有可刷新的心率数据");
-        return;
-    }
+//    int allData = 0;//总和
+//    int allDataNum = 0;//总和个数
+//    NSMutableArray * dateHeartRateArray = [HeartRateModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
+//    if (dateHeartRateArray.count>0) {
+//
+//        HeartRateModel * model = nil;
+//        for (int i = 0; i < dateHeartRateArray.count; i++) {
+//            HeartRateModel * testModel = dateHeartRateArray[i];
+//            //开始时间 < 时间戳 < 结束时间
+//            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
+//                model = testModel;
+//            }
+//        }
+//        if (model) {
+//            for (NSDictionary * dict in model.dataArray) {
+//                //心率
+//                NSInteger heartRateValue = [[dict objectForKey:@"value"] integerValue];
+//                [chartData addObject:[NSNumber numberWithFloat:heartRateValue]];
+////                [chartData addObject:[NSNumber numberWithFloat:heartRateValue += 1]];
+//                if (heartRateValue != 0) {
+//                    allData += heartRateValue;
+//                    allDataNum++;
+//                }
+//            }
+//        }
+//
+//        //刷新-波形图 @[@0, @36, @72, @108, @144, @180, @225]
+//        [self.reportHeartRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @45, @90, @135, @180] pointArr:chartData];
+//        if (model) {
+////            NSInteger spaceTime = 5 * 60 * (model.dataArray.count - 1) / 4;
+//            NSMutableArray * titleXArr = [NSMutableArray array];
+//            for (int i = 0; i < 5; i++) {
+//                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
+//                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
+//                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//                [formatter setDateFormat:@"HH:mm"];
+//                NSString *dateString = [formatter stringFromDate:date];
+//                [titleXArr addObject:dateString];
+//            }
+//            self.reportHeartRateView.titleXArr = titleXArr;
+//        }else{
+//            self.reportHeartRateView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
+//        }
+//
+//        //刷新-波形图平均值
+//        NSString * valueStr = model && model.dataArray.count > 0 ? [NSString stringWithFormat:@"%d%@",allData/allDataNum,NSLocalizedString(@"SMVC_HeartRateUnit", nil)]:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)];
+//        self.reportHeartRateView.valueStr = valueStr;
+//        //刷新-进度条（平均心率）
+//        for (XYWProgressCellView * progressCellView in self.progressArr) {
+//            if (progressCellView.index == 4) {
+//                if (model && model.dataArray.count > 0) {
+//                    progressCellView.time = [NSString stringWithFormat:@"%d",allData/allDataNum];
+//                    progressCellView.percentage = (CGFloat)((float)allData / allDataNum / 180);
+//
+//                }else{
+//                    progressCellView.time = @"0";
+//                    progressCellView.percentage = 0;
+//                }
+//
+//            }
+//        }
+//
+//    }else{
+//        NSLog(@"没有可刷新的心率数据");
+//        return;
+//    }
+    
+    [self.reportHeartRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @45, @90, @135, @180] pointArr:chartData];
+    self.reportHeartRateView.titleXArr = @[@"00:00",@"04:48",@"09:36",@"14:24",@"00:00"];
     
 }
 //刷新-呼吸数据
@@ -753,69 +760,72 @@
     NSInteger endTime = beginTime + sizeTime;
     
     NSMutableArray * chartData = [NSMutableArray array];//存放波形图数据的数组
-    int allData = 0;//总和
-    int allDataNum = 0;//总和个数
-    NSMutableArray * datebreathRateArray = [RespiratoryRateModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
-    if (datebreathRateArray.count>0) {
-        
-        RespiratoryRateModel * model = nil;
-        for (int i = 0; i < datebreathRateArray.count; i++) {
-            RespiratoryRateModel * testModel = datebreathRateArray[i];
-            //开始时间 < 时间戳 < 结束时间
-            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
-                model = testModel;
-            }
-        }
-        
-        if (model) {
-            for (NSDictionary * dict in model.dataArray) {
-                //呼吸率
-                NSInteger respiratoryRateValue = [[dict objectForKey:@"value"] integerValue];
-                [chartData addObject:[NSNumber numberWithFloat:respiratoryRateValue]];
-//                [chartData addObject:[NSNumber numberWithFloat:respiratoryRateValue += 1]];
-                if (respiratoryRateValue != 0) {
-                    allData += respiratoryRateValue;
-                    allDataNum++;
-                }
-            }
-        }
-        
-        //刷新-波形图 @[@0, @8, @16, @24, @32, @40, @48]
-        [self.reportBreathRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @10, @20, @30, @40] pointArr:chartData];
-        if (model) {
-//            NSInteger spaceTime = 5 * 60 * (model.dataArray.count - 1) / 4;
-            NSMutableArray * titleXArr = [NSMutableArray array];
-            for (int i = 0; i < 5; i++) {
-                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
-                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"HH:mm"];
-                NSString *dateString = [formatter stringFromDate:date];
-                [titleXArr addObject:dateString];
-            }
-            self.reportBreathRateView.titleXArr = titleXArr;
-        }else{
-            self.reportBreathRateView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
-        }
-        //刷新-波形图平均值
-        NSString * valueStr = model && model.dataArray.count > 0 ? [NSString stringWithFormat:@"%d%@",allData/allDataNum,NSLocalizedString(@"SMVC_HeartRateUnit", nil)]:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)];
-        self.reportBreathRateView.valueStr = valueStr;
-        //刷新-进度条（平均呼吸率）
-        for (XYWProgressCellView * progressCellView in self.progressArr) {
-            if (progressCellView.index == 5) {
-                if (model && model.dataArray.count > 0) {
-                    progressCellView.time = [NSString stringWithFormat:@"%d",allData/allDataNum];
-                    progressCellView.percentage = (CGFloat)((float)allData / allDataNum / 40);
-                }else{
-                    progressCellView.time = @"0";
-                    progressCellView.percentage = 0;
-                }
-            }
-        }
-    }else{
-        NSLog(@"没有可刷新的呼吸数据");
-        return;
-    }
+//    int allData = 0;//总和
+//    int allDataNum = 0;//总和个数
+//    NSMutableArray * datebreathRateArray = [RespiratoryRateModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
+//    if (datebreathRateArray.count>0) {
+//
+//        RespiratoryRateModel * model = nil;
+//        for (int i = 0; i < datebreathRateArray.count; i++) {
+//            RespiratoryRateModel * testModel = datebreathRateArray[i];
+//            //开始时间 < 时间戳 < 结束时间
+//            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
+//                model = testModel;
+//            }
+//        }
+//
+//        if (model) {
+//            for (NSDictionary * dict in model.dataArray) {
+//                //呼吸率
+//                NSInteger respiratoryRateValue = [[dict objectForKey:@"value"] integerValue];
+//                [chartData addObject:[NSNumber numberWithFloat:respiratoryRateValue]];
+////                [chartData addObject:[NSNumber numberWithFloat:respiratoryRateValue += 1]];
+//                if (respiratoryRateValue != 0) {
+//                    allData += respiratoryRateValue;
+//                    allDataNum++;
+//                }
+//            }
+//        }
+//
+//        //刷新-波形图 @[@0, @8, @16, @24, @32, @40, @48]
+//        [self.reportBreathRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @10, @20, @30, @40] pointArr:chartData];
+//        if (model) {
+////            NSInteger spaceTime = 5 * 60 * (model.dataArray.count - 1) / 4;
+//            NSMutableArray * titleXArr = [NSMutableArray array];
+//            for (int i = 0; i < 5; i++) {
+//                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
+//                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
+//                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//                [formatter setDateFormat:@"HH:mm"];
+//                NSString *dateString = [formatter stringFromDate:date];
+//                [titleXArr addObject:dateString];
+//            }
+//            self.reportBreathRateView.titleXArr = titleXArr;
+//        }else{
+//            self.reportBreathRateView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
+//        }
+//        //刷新-波形图平均值
+//        NSString * valueStr = model && model.dataArray.count > 0 ? [NSString stringWithFormat:@"%d%@",allData/allDataNum,NSLocalizedString(@"SMVC_HeartRateUnit", nil)]:[NSString stringWithFormat:@"--%@",NSLocalizedString(@"SMVC_HeartRateUnit", nil)];
+//        self.reportBreathRateView.valueStr = valueStr;
+//        //刷新-进度条（平均呼吸率）
+//        for (XYWProgressCellView * progressCellView in self.progressArr) {
+//            if (progressCellView.index == 5) {
+//                if (model && model.dataArray.count > 0) {
+//                    progressCellView.time = [NSString stringWithFormat:@"%d",allData/allDataNum];
+//                    progressCellView.percentage = (CGFloat)((float)allData / allDataNum / 40);
+//                }else{
+//                    progressCellView.time = @"0";
+//                    progressCellView.percentage = 0;
+//                }
+//            }
+//        }
+//    }else{
+//        NSLog(@"没有可刷新的呼吸数据");
+//        return;
+//    }
+    
+    [self.reportBreathRateView xyw_refreshChatrDataWithYtitleArr:@[@0, @10, @20, @30, @40] pointArr:chartData];
+    self.reportBreathRateView.titleXArr = @[@"00:00",@"04:48",@"09:36",@"14:24",@"00:00"];
     
 }
 //刷新-翻身数据
@@ -825,58 +835,62 @@
     NSInteger endTime = beginTime + sizeTime;
     
     NSMutableArray * chartData = [NSMutableArray array];//存放波形图数据的数组
-    int allData = 0;//总和
-    NSMutableArray * datebreathRateArray = [TurnOverModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
-    if (datebreathRateArray.count>0) {
-        
-        TurnOverModel * model = nil;
-        for (int i = 0; i < datebreathRateArray.count; i++) {
-            TurnOverModel * testModel = datebreathRateArray[i];
-            //开始时间 < 时间戳 < 结束时间
-            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
-                model = testModel;
-            }
-        }
-        
-        if (model) {
-            for (NSDictionary * dict in model.dataArray) {
-                //翻身
-                NSInteger turnOverValue = [[dict objectForKey:@"value"] integerValue];
-                turnOverValue = turnOverValue & 0x0f;//取低四位
-                allData += turnOverValue;
-                [chartData addObject:[NSNumber numberWithFloat:turnOverValue > 8 ? 8 : turnOverValue]];
-            }
-        }
-        
-        //刷新-波形图 @[@0.0, @1.6, @3.2, @4.8, @6.4, @8.0, @9.6]
-        [self.reportTurnOverView xyw_refreshChatrDataWithYtitleArr:@[@0, @2, @4, @6, @8] pointArr:chartData];
-        if (model) {
-//            NSInteger spaceTime = 3 * 60 * (model.dataArray.count - 1) / 4;
-            NSMutableArray * titleXArr = [NSMutableArray array];
-            for (int i = 0; i < 5; i++) {
-                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
-                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"HH:mm"];
-                NSString *dateString = [formatter stringFromDate:date];
-                [titleXArr addObject:dateString];
-            }
-            self.reportTurnOverView.titleXArr = titleXArr;
-        }else{
-            self.reportTurnOverView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
-        }
-        //刷新-波形图平均值
-        NSString * valueStr = [NSString stringWithFormat:@"--%@",NSLocalizedString(@"RMVC_TurnOverHourTime", nil)];
-        if (allData>0 && model.dataArray.count>0) {
-            CGFloat turnTimes = allData*20/model.dataArray.count;
-            valueStr = [NSString stringWithFormat:@"%.f%@",turnTimes,NSLocalizedString(@"RMVC_TurnOverHourTime", nil)];
-        }
-        self.reportTurnOverView.valueStr = valueStr;
-        
-    }else{
-        NSLog(@"没有可刷新的翻身数据");
-        return;
-    }
+//    int allData = 0;//总和
+//    NSMutableArray * datebreathRateArray = [TurnOverModel searchWithWhere:@{/*@"uesrId":[NSString stringWithFormat:@"%d",[MSCoreManager sharedManager].userModel.userId],*/@"deviceName":[MSCoreManager sharedManager].userModel.deviceCode}];
+//    if (datebreathRateArray.count>0) {
+//
+//        TurnOverModel * model = nil;
+//        for (int i = 0; i < datebreathRateArray.count; i++) {
+//            TurnOverModel * testModel = datebreathRateArray[i];
+//            //开始时间 < 时间戳 < 结束时间
+//            if ([testModel.dataDate integerValue]<endTime && [testModel.dataDate integerValue]>=beginTime) {
+//                model = testModel;
+//            }
+//        }
+//
+//        if (model) {
+//            for (NSDictionary * dict in model.dataArray) {
+//                //翻身
+//                NSInteger turnOverValue = [[dict objectForKey:@"value"] integerValue];
+//                turnOverValue = turnOverValue & 0x0f;//取低四位
+//                allData += turnOverValue;
+//                [chartData addObject:[NSNumber numberWithFloat:turnOverValue > 8 ? 8 : turnOverValue]];
+//            }
+//        }
+//
+//        //刷新-波形图 @[@0.0, @1.6, @3.2, @4.8, @6.4, @8.0, @9.6]
+//        [self.reportTurnOverView xyw_refreshChatrDataWithYtitleArr:@[@0, @2, @4, @6, @8] pointArr:chartData];
+//        if (model) {
+////            NSInteger spaceTime = 3 * 60 * (model.dataArray.count - 1) / 4;
+//            NSMutableArray * titleXArr = [NSMutableArray array];
+//            for (int i = 0; i < 5; i++) {
+//                NSInteger time = [model.dataDate integerValue] + self.spaceTime*i;
+//                NSDate * date= [NSDate dateWithTimeIntervalSince1970:time];
+//                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//                [formatter setDateFormat:@"HH:mm"];
+//                NSString *dateString = [formatter stringFromDate:date];
+//                [titleXArr addObject:dateString];
+//            }
+//            self.reportTurnOverView.titleXArr = titleXArr;
+//        }else{
+//            self.reportTurnOverView.titleXArr = @[@"00:00",@"06:00",@"12:00",@"18:00",@"00:00",];
+//        }
+//        //刷新-波形图平均值
+//        NSString * valueStr = [NSString stringWithFormat:@"--%@",NSLocalizedString(@"RMVC_TurnOverHourTime", nil)];
+//        if (allData>0 && model.dataArray.count>0) {
+//            CGFloat turnTimes = allData*20/model.dataArray.count;
+//            valueStr = [NSString stringWithFormat:@"%.f%@",turnTimes,NSLocalizedString(@"RMVC_TurnOverHourTime", nil)];
+//        }
+//        self.reportTurnOverView.valueStr = valueStr;
+//
+//    }else{
+//        NSLog(@"没有可刷新的翻身数据");
+//        return;
+//    }
+    
+    [self.reportTurnOverView xyw_refreshChatrDataWithYtitleArr:@[@0, @2, @5, @8, @10] pointArr:chartData];
+    self.reportTurnOverView.titleXArr = @[@"00:00",@"05:12",@"10:24",@"15:36",@"02:00",];
+
     
 }
 
@@ -934,7 +948,7 @@
             make.left.mas_equalTo(weakSelf.mas_left).offset(55);
             make.right.mas_equalTo(weakSelf.mas_right).offset(-30);
     //        make.width.equalTo(@(kSCREEN_WIDTH-70));
-            make.height.equalTo(@165);
+            make.height.equalTo(@140);
         }];
     
 //    [self.SQChartView mas_makeConstraints:^(MASConstraintMaker *make) {

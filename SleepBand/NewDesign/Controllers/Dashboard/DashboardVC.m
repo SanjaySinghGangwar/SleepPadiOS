@@ -123,7 +123,9 @@
     }];
     
     if (self.selectType == index) return;
-    self.selectType = index;    
+    self.selectType = index;
+    
+    [self xyw_loadData];
 }
 
 #pragma mark -
@@ -145,16 +147,26 @@
     WS(weakSelf);
     
     UILabel *titleLabel = [[UILabel alloc]init];
-    [self.view addSubview:titleLabel];
-    titleLabel.font = kControllerTitleFont;
-    titleLabel.textColor = kControllerTitleColor;
-    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont boldSystemFontOfSize:18.0];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentLeft;
     titleLabel.text = @"Dashboard";
+    [self.view addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.view.mas_top).offset(kStatusBarHeight);
-        make.centerX.equalTo(weakSelf.view);
-        make.height.equalTo(@44);
+        make.left.mas_equalTo(weakSelf.view.mas_left).offset(12);
+        make.height.equalTo(@40);
         make.width.equalTo(@200);
+    }];
+    
+    UIView *borderView = [[UIView alloc]init];
+    borderView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:borderView];
+    [borderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(titleLabel.mas_bottom).offset(2);
+        make.centerX.equalTo(weakSelf.view);
+        make.width.equalTo(@(kSCREEN_WIDTH - 12));
+        make.height.equalTo(@2);
     }];
     
     self.reportRangeDataSelectView = [[XYWReportRangeDataSelectViewNew alloc]init];
@@ -164,40 +176,7 @@
         make.top.mas_equalTo(weakSelf.view.mas_top).offset(kStatusBarHeight+44);
         make.centerX.equalTo(weakSelf.view);
         make.width.equalTo(weakSelf.view);
-        make.height.equalTo(@110);
-    }];
-    
-    
-    self.moreLab = [[UILabel alloc]init];
-    [self.reportRangeDataSelectView addSubview:self.moreLab];
-    self.moreLab.text = NSLocalizedString(@"RMVC_MoreData",nil);
-    self.moreLab.font = [UIFont systemFontOfSize:10 weight:UIFontWeightLight];
-    self.moreLab.textAlignment = NSTextAlignmentCenter;
-    self.moreLab.textColor = [UIColor grayColor];
-    self.moreLab.hidden = YES;
-    self.moreLab.userInteractionEnabled = YES;
-    //[self.moreLab addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dateTitleLabelTap)]];
-    [self.moreLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@65.0);
-        make.height.equalTo(@14);
-        make.centerX.equalTo(weakSelf.view);
-        make.width.equalTo(@200);
-    }];
-    
-    self.pageControl = [[UIPageControl alloc] init];
-    [self.reportRangeDataSelectView addSubview:self.pageControl];
-    self.pageControl.numberOfPages = 1;//设置总页码数
-    self.pageControl.currentPage = 0;//设置当前页码
-    self.pageControl.pageIndicatorTintColor = [UIColor colorWithHexString:@"#e5e4df"];//设置所有页码点的颜色(未选中)
-    self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithHexString:@"#1b86a4"];//设置当前页码点颜色(选中)
-    self.pageControl.hidesForSinglePage = YES;//当只有一页时，是否要隐藏
-    self.pageControl.userInteractionEnabled = NO;//关闭交互
-    self.pageControl.hidden = self.moreLab.hidden;
-    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(weakSelf.moreLab.mas_bottom);
-        make.height.equalTo(@0);
-        make.centerX.equalTo(weakSelf.moreLab);
-        make.width.equalTo(weakSelf.moreLab);
+        make.height.equalTo(@65.0);
     }];
     
     self.myScrollView = [[UIView alloc]init];
@@ -281,8 +260,39 @@
             make.width.equalTo(@(kSCREEN_WIDTH));
             make.height.equalTo(@101);
         }];
+        
+        [self xyw_loadData];
     });
     
+}
+
+#pragma mark - 加载数据
+-(void)xyw_loadData{
+    
+    switch (self.selectType) {
+        case DateType_Day:{
+            [self.dayBackView xyw_refreshDayBackViewWithData:[[UIFactory stringReturnDate:[UIFactory dateForNumString:self.selectDate]] timeIntervalSince1970] sizeTime:86400];
+        }
+            break;
+        case DateType_Week:{
+            //周
+            //[self getWeekDate];//获取日期
+            //[self.weekBackView xyw_refreshWeekBackViewWithDataArr:self.weekArray];
+            //self.moreLab.hidden = YES;
+        }
+            break;
+        case DateType_Month:{
+            //月
+            //[self getMonthDate];//获取日期
+            //[self.monthBackView xyw_refreshWeekBackViewWithDataArr:self.monthArray];
+            //self.moreLab.hidden = YES;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    //self.pageControl.hidden = self.moreLab.hidden;
 }
 
 

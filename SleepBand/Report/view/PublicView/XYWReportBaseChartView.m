@@ -15,9 +15,9 @@
 @property (nonatomic, strong) AAChartView * myChartView;
 @property (nonatomic, strong) UIView * coverView;//图表遮罩布
 
-//@property (nonatomic, strong) UIImageView * iconImgView;//iconView
-//@property (nonatomic, strong) UILabel * titleLab;//标题
-@property (nonatomic, strong) UIButton * titleBtn;//标题按钮
+@property (nonatomic, strong) UIImageView * iconImgView;//iconView
+@property (nonatomic, strong) UILabel * titleLab;//标题
+//@property (nonatomic, strong) UIButton * titleBtn;//标题按钮
 @property (nonatomic, strong) UIImageView * backgroundImgView;//波形-的背景image
 @property (nonatomic, strong) UILabel * valueLab;//平均值Lab
 
@@ -47,36 +47,43 @@
         self.themeColor = themeColor;
         self.gridYLineColor = gridYLineColor;
 //        self.titleXArr = @[@"00:00", @"05:12", @"10:24", @"15:36", @"02:00"];
-//        self.titleYArr = titleYArr;
-        // 创建临时变量
+        self.titleXArr = @[@"00:00", @"04:48", @"09:36", @"14:24", @"00:00"];
+        self.titleYArr = titleYArr;
+
         //...
-        //波形-的背景image
+
         UIImageView * backgroundImgView = [[UIImageView alloc]init];
         [self addSubview:backgroundImgView];
-        //backgroundImgView.image = [UIImage imageNamed:backgroundImageStr];
+        backgroundImgView.image = [UIImage imageNamed:backgroundImageStr];
         self.backgroundImgView = backgroundImgView;
         
-//        //iconView
-//        UIImageView * iconImgView = [[UIImageView alloc]init];
-//        [self addSubview:iconImgView];
-//        iconImgView.image = [UIImage imageNamed:iconStr];
-//        self.iconImgView = iconImgView;
-//        //标题
-//        UILabel *titleLab = [[UILabel alloc]init];
-//        [self addSubview:titleLab];
-//        titleLab.font = [UIFont systemFontOfSize:15];
-//        titleLab.textColor = [UIColor colorWithHexString:@"#1b86a4"];
-//        titleLab.textAlignment = NSTextAlignmentCenter;
-//        titleLab.text = title;
-//        self.titleLab = titleLab;
-        //标题按钮
-        UIButton * titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self addSubview:titleBtn];
-        [titleBtn setImage:[UIImage imageNamed:iconStr] forState:UIControlStateNormal];
-        [titleBtn setTitle:title forState:UIControlStateNormal];
-        [titleBtn setTitleColor:[UIColor colorWithHexString:@"#1b86a4"] forState:UIControlStateNormal];
-        [titleBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
-        self.titleBtn = titleBtn;
+//    iconView
+        UIImageView * iconImgView = [[UIImageView alloc]init];
+        iconImgView.contentMode = UIViewContentModeScaleAspectFit;
+        [iconImgView setTintColor:[UIColor whiteColor]];
+        iconImgView.image = [UIImage imageNamed:iconStr];
+        [self addSubview:iconImgView];
+        self.iconImgView = iconImgView;
+        //标题
+        UILabel *titleLab = [[UILabel alloc]init];
+        [self addSubview:titleLab];
+        titleLab.font = [UIFont systemFontOfSize:18 weight:UIFontWeightMedium];
+        titleLab.textColor = [UIColor whiteColor];
+        titleLab.textAlignment = NSTextAlignmentRight;
+        titleLab.text = title;
+        self.titleLab = titleLab;
+        
+//        //标题按钮
+//        UIButton * titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        titleBtn.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+//        //titleBtn.imageEdgeInsets = UIEdgeInsetsMake(0., button.frame.size.width - (image.size.width + 15.), 0., 0.);
+//        //titleBtn.titleEdgeInsets = UIEdgeInsetsMake(0., 0., 0., image.size.width);
+//        [self addSubview:titleBtn];
+//        [titleBtn setImage:[UIImage imageNamed:iconStr] forState:UIControlStateNormal];
+//        [titleBtn setTitle:title forState:UIControlStateNormal];
+//        [titleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [titleBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+//        self.titleBtn = titleBtn;
         
         //chart
         [self drawChartForMyChartViewWithThemeColor:themeColor gridYLineColor:gridYLineColor];
@@ -91,7 +98,7 @@
         UILabel * valueLab = [[UILabel alloc]init];
         [self addSubview:valueLab];
         valueLab.font = [UIFont systemFontOfSize:13];
-        valueLab.textColor = [UIColor colorWithHexString:@"#1b86a4"];
+        valueLab.textColor = [UIColor whiteColor];
         valueLab.textAlignment = NSTextAlignmentRight;
         valueLab.text = valueStr;
         self.valueLab = valueLab;
@@ -135,7 +142,7 @@
             [self addSubview:lab];
             lab.tag = i + 10;
             lab.font = [UIFont systemFontOfSize:11];
-            lab.textColor = [UIColor grayColor];
+            lab.textColor = [UIColor whiteColor];
             lab.textAlignment = NSTextAlignmentCenter;
             lab.text = titleXArr[i];
             [xLabViews addObject:lab];
@@ -231,36 +238,36 @@
         make.centerX.equalTo(weakSelf.mas_centerX);
         make.top.mas_equalTo(weakSelf.mas_top).offset(15);
         make.width.equalTo(@325);
-        make.height.equalTo(@198);
+        make.height.equalTo(@214);
     }];
     
     //标题按钮
-    [self.titleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(weakSelf.mas_top).offset(-5);
-        make.centerX.equalTo(weakSelf.mas_centerX);
-        make.width.equalTo(@140);
-        make.height.equalTo(@28);
-    }];
-    
-    //iconView
-//    [self.iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(weakSelf.mas_top).offset(0);
-//        make.left.mas_equalTo(weakSelf.mas_centerX).offset(-15-7-30);
-//        make.width.equalTo(@15);
-//        make.height.equalTo(@15);
-//    }];
-//    //标题
-//    [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(weakSelf.iconImgView);
-//        make.left.mas_equalTo(weakSelf.iconImgView.mas_right).offset(7);
-//        make.width.equalTo(@100);
+//    [self.titleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(weakSelf.mas_top).offset(-5);
+//        make.centerX.equalTo(weakSelf.mas_centerX);
+//        make.width.equalTo(@140);
 //        make.height.equalTo(@28);
 //    }];
     
+    //iconView
+    
+    //标题
+    [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(weakSelf.mas_top).offset(0);
+        make.centerX.equalTo(weakSelf).offset(-30);
+        make.height.equalTo(@28);
+    }];
+    
+    [self.iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(weakSelf.titleLab);
+        make.left.mas_equalTo(weakSelf.titleLab.mas_right).offset(10);
+        make.width.equalTo(@30);
+        make.height.equalTo(@30);
+    }];
+    
     //平均值Lab valueLab
     [self.valueLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@100);
-        make.top.mas_equalTo(weakSelf.titleBtn.mas_bottom).offset(20);
+        make.top.mas_equalTo(weakSelf.iconImgView.mas_bottom).offset(20);
         make.right.mas_equalTo(weakSelf.backgroundImgView.mas_right).offset(-20);
         make.height.equalTo(@13);
     }];

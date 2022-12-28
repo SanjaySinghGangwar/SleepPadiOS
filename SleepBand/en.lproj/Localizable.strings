@@ -373,3 +373,4 @@
 "JVC_Awake" = "Awake >";
 "JVC_HeartRate" = "Heart Rate >";
 "JVC_RespirationRate" = "Respiration Rate >";
+"DTVC_BodyMovement" = "Body Movement";
