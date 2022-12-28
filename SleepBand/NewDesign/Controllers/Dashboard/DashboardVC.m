@@ -125,7 +125,7 @@
     if (self.selectType == index) return;
     self.selectType = index;
     
-    [self xyw_loadData];
+   // [self xyw_loadData];
 }
 
 #pragma mark -
